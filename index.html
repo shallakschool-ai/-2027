@@ -2,8 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الهيكلية الإدارية | ثانوية الجنان</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,69 +10,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
   --green:#147c56;
   --green-dark:#0b5d42;
   --green-light:#249268;
-
-  --gray:#6d7771;
+  --gray:#6f7973;
   --gray-dark:#303833;
-  --gray-card:#58635d;
   --gray-light:#eef2ef;
-
-  --mustard:#bd8528;
-  --mustard-dark:#936115;
+  --mustard:#b98227;
   --mustard-light:#fbf2df;
-
-  --white:#ffffff;
-  --line:#7f9188;
-
-  --shadow:0 15px 45px rgba(20,55,38,.10);
+  --white:#fff;
+  --line:#b8c7bf;
+  --shadow:0 14px 40px rgba(22,55,40,.12);
 }
 
-
-/* =========================================
-   GENERAL
-========================================= */
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
-
   font-family:"Cairo",Arial,sans-serif;
-
   color:var(--gray-dark);
-
   background:
-    radial-gradient(
-      circle at 95% 0%,
-      rgba(20,124,86,.09),
-      transparent 450px
-    ),
-    radial-gradient(
-      circle at 5% 10%,
-      rgba(189,133,40,.08),
-      transparent 420px
-    ),
+    radial-gradient(circle at 96% 0%,rgba(20,124,86,.10),transparent 450px),
+    radial-gradient(circle at 5% 15%,rgba(185,130,39,.08),transparent 400px),
     #f4f7f5;
 }
 
-button,
-input{
-  font-family:inherit;
-}
-
-button{
-  cursor:pointer;
-}
+button,input{font-family:inherit}
+button{cursor:pointer}
 
 .page{
   width:min(1450px,calc(100% - 30px));
@@ -81,19 +45,11 @@ button{
   padding-bottom:60px;
 }
 
-
-/* =========================================
-   HEADER
-========================================= */
-
 header{
   min-height:86px;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
-
-  gap:20px;
 }
 
 .brand{
@@ -105,733 +61,685 @@ header{
 .logo{
   width:52px;
   height:52px;
-
   display:grid;
   place-items:center;
-
   border-radius:16px;
-
-  background:
-    linear-gradient(
-      145deg,
-      var(--green-light),
-      var(--green-dark)
-    );
-
+  background:linear-gradient(145deg,var(--green-light),var(--green-dark));
   color:#fff;
-
   font-size:22px;
   font-weight:800;
-
-  box-shadow:
-    0 10px 28px rgba(20,70,48,.18);
+  box-shadow:var(--shadow);
 }
 
 .brand-sub{
   margin:0;
-
   color:var(--green);
-
   font-size:11px;
   font-weight:800;
 }
 
 .brand-title{
   margin:2px 0 0;
-
   font-size:20px;
 }
-
-
-/* =========================================
-   HERO
-========================================= */
 
 .hero{
   position:relative;
   overflow:hidden;
-
   min-height:190px;
-
   display:flex;
   align-items:center;
-
   padding:38px;
-
   border-radius:26px;
-
-  background:
-    linear-gradient(
-      120deg,
-      #ffffff,
-      #edf6f1
-    );
-
+  background:linear-gradient(120deg,#fff,#edf6f1);
   box-shadow:var(--shadow);
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-
   max-width:760px;
 }
 
 .year{
   display:inline-flex;
-
   padding:7px 14px;
-
   border-radius:50px;
-
   background:var(--mustard-light);
-
-  color:var(--mustard-dark);
-
+  color:#956114;
   font-size:12px;
   font-weight:800;
 }
 
 .hero h1{
   margin:13px 0 7px;
-
-  font-size:clamp(30px,4.5vw,48px);
-
-  line-height:1.25;
+  font-size:clamp(30px,4vw,48px);
 }
 
 .hero p{
   margin:0;
-
   color:var(--gray);
-
   font-size:13px;
-
   line-height:1.9;
 }
 
 .hero-decoration{
   position:absolute;
-
   width:280px;
   height:280px;
-
   left:-75px;
   top:-95px;
-
   border-radius:50%;
-
-  border:
-    40px solid rgba(20,124,86,.05);
-
+  border:40px solid rgba(20,124,86,.05);
   box-shadow:
-    0 0 0 40px rgba(189,133,40,.035),
+    0 0 0 40px rgba(185,130,39,.035),
     0 0 0 80px rgba(20,124,86,.02);
 }
 
-
-/* =========================================
-   TOOLBAR
-========================================= */
-
 .toolbar{
   margin:18px 0;
-
   padding:11px;
-
   display:flex;
   align-items:center;
-
   gap:12px;
-
   border-radius:17px;
-
   background:rgba(255,255,255,.94);
-
-  box-shadow:
-    0 8px 30px rgba(20,55,38,.07);
+  box-shadow:0 8px 30px rgba(20,55,38,.07);
 }
 
 .search-box{
   flex:1;
-
   display:flex;
   align-items:center;
-
   gap:9px;
-
-  min-width:0;
-}
-
-.search-icon{
-  color:var(--green);
-  font-size:19px;
 }
 
 .search-box input{
   width:100%;
-
   border:0;
   outline:0;
-
   background:transparent;
-
   font-size:13px;
+}
+
+.search-icon{
+  color:var(--green);
+  font-size:20px;
 }
 
 .clear-btn{
   width:32px;
   height:32px;
-
   border:0;
-
   border-radius:50%;
-
   background:var(--gray-light);
-
   color:var(--gray);
-
-  font-size:17px;
 }
-
-.zoom-controls{
-  display:flex;
-  gap:6px;
-}
-
-.control-btn{
-  height:37px;
-
-  padding:0 13px;
-
-  border:
-    1px solid #dce4df;
-
-  border-radius:50px;
-
-  background:white;
-
-  color:#47514b;
-
-  font-size:11px;
-  font-weight:700;
-
-  transition:.2s;
-}
-
-.control-btn:hover{
-  color:var(--green);
-
-  border-color:
-    rgba(20,124,86,.55);
-}
-
-.control-square{
-  width:38px;
-
-  padding:0;
-
-  font-size:18px;
-}
-
-
-/* =========================================
-   SEARCH RESULTS
-========================================= */
 
 .results{
   margin-bottom:16px;
-
   padding:11px;
-
   border-radius:17px;
-
   background:white;
-
-  box-shadow:
-    0 8px 28px rgba(20,55,38,.07);
+  box-shadow:0 8px 28px rgba(20,55,38,.07);
 }
 
 .results-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(auto-fit,minmax(200px,1fr));
-
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
   gap:8px;
 }
 
 .result-item{
   padding:11px 12px;
-
   text-align:right;
-
-  border:
-    1px solid #e2e8e4;
-
+  border:1px solid #e2e8e4;
   border-radius:12px;
-
   background:#f5f8f6;
 }
 
 .result-item strong{
   display:block;
-
   color:var(--green-dark);
-
   font-size:12px;
 }
 
 .result-item span{
   color:var(--gray);
-
   font-size:10px;
 }
 
+/* DESKTOP FULL TREE */
 
-/* =========================================
-   CHART PANEL
-========================================= */
-
-.chart-panel{
-  padding:20px;
-
+.desktop-chart{
+  background:#fff;
   border-radius:25px;
-
-  background:white;
-
+  padding:22px;
   box-shadow:var(--shadow);
 }
 
-.chart-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  gap:15px;
-
-  margin-bottom:14px;
-}
-
-.chart-header small{
-  color:var(--green);
-
-  font-size:10px;
-  font-weight:800;
-}
-
-.chart-header h2{
-  margin:2px 0 0;
-
+.desktop-chart h2{
+  margin:0 0 18px;
   font-size:22px;
 }
 
-.chart-hint{
-  color:var(--gray);
-
-  font-size:10px;
-}
-
-
-/* =========================================
-   VIEWPORT
-========================================= */
-
-.chart-viewport{
-  position:relative;
-
-  width:100%;
-
-  height:680px;
-
+.tree-wrap{
   overflow:auto;
-
-  border-radius:18px;
-
-  background:
-    linear-gradient(
-      rgba(20,124,86,.028) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(20,124,86,.028) 1px,
-      transparent 1px
-    ),
-    #fafcfb;
-
-  background-size:28px 28px;
-
-  border:
-    1px solid #edf1ee;
-
-  -webkit-overflow-scrolling:touch;
-
-  scrollbar-width:thin;
-
-  cursor:grab;
-
-  direction:ltr;
+  padding:20px 10px 35px;
 }
 
-.chart-viewport.dragging{
-  cursor:grabbing;
-
-  user-select:none;
+.tree,
+.tree ul{
+  position:relative;
+  margin:0;
+  padding:0;
+  list-style:none;
+  text-align:center;
 }
 
-#orgSvg{
-  display:block;
-
-  max-width:none;
-
-  transform-origin:top left;
+.tree ul{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  padding-top:36px;
 }
 
-
-/* =========================================
-   SVG
-========================================= */
-
-.connector{
-  fill:none;
-
-  stroke:var(--line);
-
-  stroke-width:3;
-
-  stroke-linecap:round;
-  stroke-linejoin:round;
-
-  vector-effect:non-scaling-stroke;
+.tree li{
+  position:relative;
+  padding:36px 3px 0;
+  flex:0 0 auto;
 }
 
-.node-group{
-  cursor:pointer;
+.tree>li{padding-top:0}
+
+.tree li::before,
+.tree li::after{
+  content:"";
+  position:absolute;
+  top:17px;
+  width:50%;
+  height:20px;
+  border-top:2px solid var(--line);
 }
 
-.node-group:hover{
-  opacity:.91;
+.tree li::before{right:50%}
+.tree li::after{
+  left:50%;
+  border-right:2px solid var(--line);
 }
 
-.node-rect{
-  stroke-width:1.8;
+.tree li:first-child::before{border:none}
+.tree li:last-child::after{border:none}
+.tree li:only-child::before,
+.tree li:only-child::after{display:none}
 
-  vector-effect:non-scaling-stroke;
-
-  filter:
-    drop-shadow(
-      0 4px 5px rgba(24,55,40,.16)
-    );
+.tree ul::before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:50%;
+  height:36px;
+  border-right:2px solid var(--line);
 }
 
-.role-text,
-.name-text{
-  font-family:"Cairo",Arial,sans-serif;
-
-  pointer-events:none;
+.node-card{
+  width:180px;
+  min-height:86px;
+  border:0;
+  border-radius:15px;
+  padding:12px 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:4px;
+  box-shadow:0 8px 22px rgba(22,49,36,.12);
+  transition:.2s;
 }
 
-.role-text{
-  font-size:14px;
+.node-card:hover{
+  transform:translateY(-4px);
+}
+
+.node-role{
+  font-size:12px;
+  font-weight:800;
+  line-height:1.45;
+}
+
+.node-name{
+  font-size:10px;
+  opacity:.9;
+}
+
+.green{
+  background:linear-gradient(145deg,var(--green-light),var(--green-dark));
+  color:#fff;
+}
+
+.mustard{
+  background:linear-gradient(145deg,#c58d31,#956114);
+  color:#fff;
+}
+
+.gray{
+  background:linear-gradient(145deg,#69736e,#474f4b);
+  color:#fff;
+}
+
+.outline{
+  background:#fff;
+  color:var(--gray-dark);
+  border:1.6px solid var(--green);
+}
+
+/* MOBILE FOCUS TREE */
+
+.mobile-focus{
+  display:none;
+}
+
+.focus-shell{
+  background:#fff;
+  border-radius:26px;
+  padding:16px;
+  box-shadow:var(--shadow);
+}
+
+.focus-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.focus-eyebrow{
+  color:var(--green);
+  font-size:10px;
   font-weight:800;
 }
 
-.name-text{
+.focus-title{
+  margin:2px 0 0;
+  font-size:20px;
+}
+
+.breadcrumb{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px;
+  margin-bottom:16px;
+}
+
+.crumb{
+  border:0;
+  background:var(--gray-light);
+  border-radius:50px;
+  padding:6px 10px;
+  color:var(--gray-dark);
+  font-size:10px;
+  font-weight:700;
+}
+
+.crumb.active{
+  background:var(--green);
+  color:#fff;
+}
+
+.focus-stage{
+  position:relative;
+  min-height:490px;
+  overflow:hidden;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 50% 10%,rgba(20,124,86,.08),transparent 230px),
+    #f9fbfa;
+  border:1px solid #edf1ee;
+  padding:22px 14px;
+}
+
+.current-card{
+  width:min(310px,88%);
+  margin:0 auto;
+  padding:18px 15px;
+  border-radius:20px;
+  color:#fff;
+  text-align:center;
+  background:linear-gradient(145deg,var(--green-light),var(--green-dark));
+  box-shadow:0 14px 30px rgba(20,70,48,.18);
+}
+
+.current-card .role{
+  font-size:18px;
+  font-weight:800;
+}
+
+.current-card .name{
+  margin-top:4px;
+  font-size:12px;
+  opacity:.92;
+}
+
+.branch-line{
+  width:2px;
+  height:34px;
+  margin:0 auto;
+  background:var(--line);
+}
+
+.children-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.child-card{
+  min-height:108px;
+  padding:14px 11px;
+  border:0;
+  border-radius:18px;
+  background:#fff;
+  color:var(--gray-dark);
+  border:1px solid #dfe8e3;
+  box-shadow:0 8px 20px rgba(22,49,36,.08);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transition:.22s;
+}
+
+.child-card:active{
+  transform:scale(.98);
+}
+
+.child-role{
+  font-size:12px;
+  font-weight:800;
+  line-height:1.45;
+}
+
+.child-name{
+  margin-top:5px;
+  font-size:10px;
+  color:var(--gray);
+}
+
+.child-arrow{
+  margin-top:9px;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--gray-light);
+  color:var(--green);
+  font-size:13px;
+}
+
+.no-children{
+  padding:35px 20px;
+  text-align:center;
+  color:var(--gray);
+  font-size:12px;
+}
+
+.focus-actions{
+  display:flex;
+  gap:8px;
+  margin-top:14px;
+}
+
+.focus-btn{
+  flex:1;
+  border:0;
+  border-radius:15px;
+  padding:11px 12px;
+  background:var(--gray-light);
+  color:var(--gray-dark);
   font-size:11px;
-  font-weight:600;
+  font-weight:700;
 }
 
-.node-highlight rect{
-  stroke:#e4ad45 !important;
-  stroke-width:5 !important;
+.focus-btn.primary{
+  background:var(--green);
+  color:#fff;
 }
 
+/* MINI MAP */
 
-/* =========================================
-   VISION
-========================================= */
+.minimap{
+  margin-top:15px;
+  padding:12px;
+  border-radius:18px;
+  background:#f4f7f5;
+  border:1px solid #e6ece8;
+}
+
+.minimap-title{
+  margin-bottom:8px;
+  color:var(--gray);
+  font-size:9px;
+  text-align:center;
+}
+
+.minimap-track{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
+  min-height:30px;
+}
+
+.map-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#c9d4ce;
+}
+
+.map-dot.active{
+  width:12px;
+  height:12px;
+  background:var(--green);
+  box-shadow:0 0 0 5px rgba(20,124,86,.10);
+}
+
+.map-line{
+  width:20px;
+  height:2px;
+  background:#c9d4ce;
+}
+
+/* BOTTOM SHEET */
+
+.sheet{
+  position:fixed;
+  inset:0;
+  z-index:300;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.sheet.hidden{display:none}
+
+.sheet-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(12,28,20,.42);
+  backdrop-filter:blur(4px);
+}
+
+.sheet-card{
+  position:relative;
+  z-index:2;
+  width:min(620px,100%);
+  padding:12px 18px 24px;
+  border-radius:26px 26px 0 0;
+  background:#fff;
+  box-shadow:0 -20px 60px rgba(15,40,28,.20);
+  animation:sheetUp .25s ease;
+}
+
+@keyframes sheetUp{
+  from{transform:translateY(100%)}
+  to{transform:translateY(0)}
+}
+
+.sheet-handle{
+  width:48px;
+  height:5px;
+  margin:0 auto 18px;
+  border-radius:50px;
+  background:#d7dfda;
+}
+
+.sheet-category{
+  color:var(--mustard);
+  font-size:10px;
+  font-weight:800;
+}
+
+.sheet-card h3{
+  margin:6px 0 3px;
+  color:var(--green-dark);
+  font-size:21px;
+}
+
+.sheet-name{
+  margin:0;
+  color:var(--gray);
+  font-size:12px;
+}
+
+.sheet-buttons{
+  display:flex;
+  gap:8px;
+  margin-top:20px;
+}
+
+.sheet-btn{
+  flex:1;
+  border:0;
+  border-radius:14px;
+  padding:11px 12px;
+  background:var(--gray-light);
+  color:var(--gray-dark);
+  font-size:11px;
+  font-weight:700;
+}
+
+.sheet-btn.primary{
+  background:var(--green);
+  color:#fff;
+}
 
 .vision{
   margin-top:18px;
-
   padding:18px;
-
   display:flex;
   align-items:center;
-
   gap:13px;
-
   border-radius:18px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #fff,
-      var(--mustard-light)
-    );
-
-  border:
-    1px solid rgba(189,133,40,.26);
+  background:linear-gradient(135deg,#fff,var(--mustard-light));
+  border:1px solid rgba(185,130,39,.24);
 }
 
 .vision-icon{
   width:42px;
   height:42px;
-
   flex:0 0 42px;
-
   display:grid;
   place-items:center;
-
   border-radius:13px;
-
   background:var(--mustard);
-
-  color:white;
+  color:#fff;
 }
 
 .vision p{
   margin:0;
-
   font-size:12px;
-
   line-height:1.9;
 }
 
-
-/* =========================================
-   MODAL
-========================================= */
-
-.modal{
-  position:fixed;
-
-  inset:0;
-
-  z-index:200;
-
-  display:grid;
-  place-items:center;
-
-  padding:18px;
-}
-
-.modal.hidden{
-  display:none;
-}
-
-.modal-overlay{
-  position:absolute;
-
-  inset:0;
-
-  background:
-    rgba(15,30,22,.52);
-
-  backdrop-filter:blur(7px);
-}
-
-.modal-card{
-  position:relative;
-
-  z-index:2;
-
-  width:min(470px,100%);
-
-  padding:28px;
-
-  border-radius:23px;
-
-  background:#fff;
-
-  box-shadow:
-    0 30px 90px rgba(10,30,20,.28);
-}
-
-.modal-close{
-  position:absolute;
-
-  top:13px;
-  left:13px;
-
-  width:35px;
-  height:35px;
-
-  border:0;
-
-  border-radius:50%;
-
-  background:var(--gray-light);
-
-  font-size:18px;
-}
-
-.modal-category{
-  color:var(--mustard);
-
-  font-size:11px;
-  font-weight:800;
-}
-
-.modal-card h3{
-  margin:8px 0 3px;
-
-  color:var(--green-dark);
-}
-
-.modal-name{
-  margin:0;
-
-  color:var(--gray);
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
 @media(max-width:700px){
-
   .page{
     width:100%;
-
-    padding:
-      0 8px 40px;
+    padding:0 8px 40px;
   }
 
   header{
     min-height:72px;
-
-    padding:
-      7px 3px;
+    padding:7px 3px;
   }
 
   .logo{
     width:43px;
     height:43px;
-
     font-size:18px;
   }
 
-  .brand-title{
-    font-size:15px;
-  }
-
-  .brand-sub{
-    font-size:9px;
-  }
+  .brand-title{font-size:15px}
+  .brand-sub{font-size:9px}
 
   .hero{
     min-height:auto;
-
-    padding:
-      23px 18px;
-
+    padding:22px 18px;
     border-radius:20px;
   }
 
-  .hero h1{
-    font-size:28px;
-  }
-
-  .hero p{
-    font-size:10.5px;
-  }
-
-  .year{
-    font-size:10px;
-  }
+  .hero h1{font-size:28px}
+  .hero p{font-size:10.5px}
+  .year{font-size:10px}
 
   .toolbar{
-    flex-wrap:wrap;
-
+    margin:12px 0;
     padding:9px;
   }
 
-  .search-box{
-    flex-basis:100%;
+  .desktop-chart{
+    display:none;
   }
 
-  .zoom-controls{
-    width:100%;
-
-    justify-content:center;
+  .mobile-focus{
+    display:block;
   }
 
-  .control-btn{
-    flex:1;
+  .focus-stage{
+    min-height:520px;
   }
 
-  .control-square{
-    flex:0 0 42px;
-  }
-
-  .chart-panel{
-    padding:
-      10px 6px 14px;
-
-    border-radius:20px;
-  }
-
-  .chart-header{
-    padding:
-      3px 8px;
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:3px;
-  }
-
-  .chart-header h2{
-    font-size:18px;
-  }
-
-  .chart-hint{
-    font-size:9px;
-  }
-
-  /*
-    أهم نقطة:
-    مساحة كبيرة للمخطط
-  */
-
-  .chart-viewport{
-    height:62vh;
-
-    min-height:470px;
-
-    max-height:620px;
-
-    border-radius:14px;
-
-    /*
-      نترك الهاتف يقوم بالسحب الطبيعي
-    */
-    touch-action:auto;
+  .children-grid{
+    grid-template-columns:1fr 1fr;
   }
 
   .vision{
     margin-top:12px;
-
     padding:13px;
   }
 
-  .vision p{
-    font-size:10px;
-  }
+  .vision p{font-size:10px}
 
   .vision-icon{
     width:37px;
     height:37px;
-
     flex-basis:37px;
   }
-
 }
 
+@media(max-width:390px){
+  .children-grid{
+    grid-template-columns:1fr;
+  }
+
+  .focus-stage{
+    min-height:560px;
+  }
+}
 </style>
 </head>
 
@@ -839,2530 +747,682 @@ header{
 
 <div class="page">
 
-
 <header>
-
   <div class="brand">
-
-    <div class="logo">
-      ج
-    </div>
-
+    <div class="logo">ج</div>
     <div>
-
-      <p class="brand-sub">
-        ثانوية الجنان - الإدارة العامة
-      </p>
-
-      <h1 class="brand-title">
-        الهيكلية الإدارية الرقمية
-      </h1>
-
+      <p class="brand-sub">ثانوية الجنان - الإدارة العامة</p>
+      <h1 class="brand-title">الهيكلية الإدارية الرقمية</h1>
     </div>
-
   </div>
-
 </header>
 
-
 <section class="hero">
-
   <div class="hero-content">
-
-    <span class="year">
-      العام الدراسي 2025 - 2026
-    </span>
-
-    <h1>
-      Organizational Chart
-    </h1>
-
+    <span class="year">العام الدراسي 2025 - 2026</span>
+    <h1>Organizational Chart</h1>
     <p>
-      الهيكلية الإدارية التفاعلية لثانوية الجنان.
-      استعرض الأقسام والمناصب والعلاقات التنظيمية
-      من خلال مخطط رقمي واضح وتفاعلي.
+      الهيكلية الإدارية التفاعلية لثانوية الجنان،
+      بتجربة مختلفة للكمبيوتر والهاتف.
     </p>
-
   </div>
-
   <div class="hero-decoration"></div>
-
 </section>
-
 
 <section class="toolbar">
-
   <div class="search-box">
-
-    <span class="search-icon">
-      ⌕
-    </span>
-
-    <input
-      type="search"
-      id="searchInput"
-      placeholder="ابحث بالاسم أو الوظيفة..."
-    >
-
-    <button
-      class="clear-btn"
-      id="clearSearch"
-      type="button"
-    >
-      ×
-    </button>
-
+    <span class="search-icon">⌕</span>
+    <input id="searchInput" type="search" placeholder="ابحث بالاسم أو الوظيفة...">
+    <button id="clearSearch" class="clear-btn">×</button>
   </div>
-
-
-  <div class="zoom-controls">
-
-    <button
-      class="control-btn control-square"
-      id="zoomOut"
-      type="button"
-    >
-      −
-    </button>
-
-    <button
-      class="control-btn"
-      id="resetZoom"
-      type="button"
-    >
-      100%
-    </button>
-
-    <button
-      class="control-btn control-square"
-      id="zoomIn"
-      type="button"
-    >
-      +
-    </button>
-
-    <button
-      class="control-btn"
-      id="goManager"
-      type="button"
-    >
-      المدير العام
-    </button>
-
-  </div>
-
 </section>
 
+<section id="searchResults" class="results" hidden></section>
 
-<section
-  id="searchResults"
-  class="results"
-  hidden
-></section>
+<!-- DESKTOP -->
+<section class="desktop-chart">
+  <h2>الهيكل الإداري الكامل</h2>
+  <div class="tree-wrap">
+    <div id="desktopTree"></div>
+  </div>
+</section>
 
+<!-- MOBILE -->
+<section class="mobile-focus">
 
-<section class="chart-panel">
+  <div class="focus-shell">
 
-  <div class="chart-header">
-
-    <div>
-
-      <small>
-        ORGANIZATIONAL CHART
-      </small>
-
-      <h2>
-        الهيكل الإداري
-      </h2>
-
+    <div class="focus-top">
+      <div>
+        <div class="focus-eyebrow">FOCUS TREE</div>
+        <h2 class="focus-title">الهيكل الإداري</h2>
+      </div>
     </div>
 
-    <div class="chart-hint">
-      اسحب الهيكلية يمينًا ويسارًا • واضغط على أي منصب للتفاصيل
+    <div id="breadcrumb" class="breadcrumb"></div>
+
+    <div class="focus-stage">
+
+      <div id="currentCard"></div>
+
+      <div class="branch-line"></div>
+
+      <div id="childrenGrid" class="children-grid"></div>
+
+      <div class="focus-actions">
+        <button id="backBtn" class="focus-btn">الرجوع</button>
+        <button id="rootBtn" class="focus-btn primary">المدير العام</button>
+      </div>
+
+      <div class="minimap">
+        <div class="minimap-title">موقعك ضمن الهيكلية</div>
+        <div id="minimapTrack" class="minimap-track"></div>
+      </div>
+
     </div>
 
   </div>
 
-
-  <div
-    class="chart-viewport"
-    id="viewport"
-  >
-
-    <svg
-      id="orgSvg"
-      xmlns="http://www.w3.org/2000/svg"
-    ></svg>
-
-  </div>
-
 </section>
-
 
 <section class="vision">
-
-  <div class="vision-icon">
-    ✦
-  </div>
-
+  <div class="vision-icon">✦</div>
   <p>
     <strong>رؤيتنا:</strong>
     إعداد جيل صالح متوازن، مزود بمهارات القرن الواحد والعشرين
     الضرورية للنجاح في الحياة والعمل.
   </p>
-
 </section>
-
 
 </div>
 
+<!-- BOTTOM SHEET -->
+<div id="sheet" class="sheet hidden">
 
+  <div id="sheetOverlay" class="sheet-overlay"></div>
 
-<div
-  class="modal hidden"
-  id="modal"
->
+  <div class="sheet-card">
 
-  <div
-    class="modal-overlay"
-    id="modalOverlay"
-  ></div>
+    <div class="sheet-handle"></div>
 
-  <div class="modal-card">
+    <div id="sheetCategory" class="sheet-category"></div>
 
-    <button
-      class="modal-close"
-      id="modalClose"
-      type="button"
-    >
-      ×
-    </button>
+    <h3 id="sheetRole"></h3>
 
-    <span
-      class="modal-category"
-      id="modalCategory"
-    ></span>
+    <p id="sheetName" class="sheet-name"></p>
 
-    <h3 id="modalRole"></h3>
+    <div class="sheet-buttons">
 
-    <p
-      class="modal-name"
-      id="modalName"
-    ></p>
+      <button id="sheetClose" class="sheet-btn">
+        إغلاق
+      </button>
+
+      <button id="sheetOpenChildren" class="sheet-btn primary">
+        عرض التابعين
+      </button>
+
+    </div>
 
   </div>
 
 </div>
 
-
-
 <script>
 
-/* =========================================================
-   DATA
-========================================================= */
-
 const orgData = {
-
   id:"manager",
-
   role:"المدير العام",
-
   name:"د. سالم يكن",
-
-  tone:"root",
-
   category:"الإدارة العليا",
-
+  tone:"green",
   children:[
-
-
     {
-
       id:"deputy",
-
       role:"نائب المدير",
-
       name:"د. يكانة يكن",
-
-      tone:"green",
-
       category:"الإدارة العليا",
-
+      tone:"green",
       children:[
-
-
         {
-
           id:"admin-quality",
-
           role:"الإشراف الإداري والجودة",
-
           name:"أ. سامي حلاق",
-
-          tone:"green",
-
           category:"الإدارة والجودة",
-
+          tone:"green",
           children:[
-
-
             {
-
               id:"general-supervision",
-
               role:"الإشراف العام",
-
               name:"أ. نهى الزهر",
-
-              tone:"green",
-
               category:"الإشراف",
-
+              tone:"green",
               children:[
-
-                {
-                  id:"maintenance",
-                  role:"مسؤول الصيانة",
-                  name:"محمد لاغا",
-                  tone:"gray",
-                  category:"تشغيل"
-                },
-
-                {
-                  id:"guard",
-                  role:"حارس",
-                  name:"",
-                  tone:"gray",
-                  category:"تشغيل"
-                },
-
-                {
-                  id:"driver",
-                  role:"سائق",
-                  name:"",
-                  tone:"gray",
-                  category:"تشغيل"
-                },
-
-                {
-                  id:"cleaner",
-                  role:"عامل نظافة",
-                  name:"",
-                  tone:"gray",
-                  category:"تشغيل"
-                }
-
+                {id:"maintenance",role:"مسؤول الصيانة",name:"محمد لاغا",category:"تشغيل",tone:"gray"},
+                {id:"guard",role:"حارس",name:"",category:"تشغيل",tone:"gray"},
+                {id:"driver",role:"سائق",name:"",category:"تشغيل",tone:"gray"},
+                {id:"cleaner",role:"عامل نظافة",name:"",category:"تشغيل",tone:"gray"}
               ]
-
             },
-
-
+            {id:"students",role:"شؤون طلاب",name:"أ. مصطفى كمون",category:"الإدارة",tone:"green"},
+            {id:"hr",role:"موارد بشرية",name:"أ. صبا الخضر",category:"الإدارة",tone:"green"},
             {
-
-              id:"students",
-
-              role:"شؤون طلاب",
-
-              name:"أ. مصطفى كمون",
-
-              tone:"green",
-
-              category:"الإدارة"
-
-            },
-
-
-            {
-
-              id:"hr",
-
-              role:"موارد بشرية",
-
-              name:"أ. صبا الخضر",
-
-              tone:"green",
-
-              category:"الإدارة"
-
-            },
-
-
-            {
-
               id:"audit",
-
               role:"مدقق مالي",
-
               name:"أ. عبدالله زيادة",
-
-              tone:"mustard",
-
               category:"المالية",
-
-              children:[
-
-                {
-
-                  id:"accountant",
-
-                  role:"محاسب",
-
-                  name:"أ. فاطمة أبو زيد",
-
-                  tone:"mustard",
-
-                  category:"المالية",
-
-                  children:[
-
-                    {
-
-                      id:"cashier",
-
-                      role:"أمين صندوق",
-
-                      name:"أ. هنادي لاذقاني",
-
-                      tone:"mustard",
-
-                      category:"المالية"
-
-                    }
-
-                  ]
-
-                }
-
-              ]
-
-            },
-
-
-            {
-
-              id:"marketing",
-
-              role:"قسم الإعلام والتسويق",
-
-              name:"أ. سامي حلاق",
-
               tone:"mustard",
-
-              category:"الإعلام والتسويق"
-
+              children:[
+                {
+                  id:"accountant",
+                  role:"محاسب",
+                  name:"أ. فاطمة أبو زيد",
+                  category:"المالية",
+                  tone:"mustard",
+                  children:[
+                    {id:"cashier",role:"أمين صندوق",name:"أ. هنادي لاذقاني",category:"المالية",tone:"mustard"}
+                  ]
+                }
+              ]
             },
-
-
-            {
-
-              id:"nurse",
-
-              role:"ممرض",
-
-              name:"أ. سوزان عبيد",
-
-              tone:"green",
-
-              category:"الدعم"
-
-            },
-
-
-            {
-
-              id:"stock",
-
-              role:"مسؤول مخزون",
-
-              name:"أ. نهى الزهر",
-
-              tone:"outline",
-
-              category:"الدعم"
-
-            },
-
-
-            {
-
-              id:"purchasing",
-
-              role:"مسؤول مشتريات",
-
-              name:"أ. سامي حلاق",
-
-              tone:"outline",
-
-              category:"الدعم"
-
-            }
-
+            {id:"marketing",role:"قسم الإعلام والتسويق",name:"أ. سامي حلاق",category:"الإعلام والتسويق",tone:"mustard"},
+            {id:"nurse",role:"ممرض",name:"أ. سوزان عبيد",category:"الدعم",tone:"green"},
+            {id:"stock",role:"مسؤول مخزون",name:"أ. نهى الزهر",category:"الدعم",tone:"outline"},
+            {id:"purchasing",role:"مسؤول مشتريات",name:"أ. سامي حلاق",category:"الدعم",tone:"outline"}
           ]
-
         }
-
       ]
-
     },
-
-
     {
-
       id:"secretary",
-
       role:"أمين السر",
-
       name:"أ. منى ضناوي",
-
-      tone:"green",
-
-      category:"الإدارة"
-
+      category:"الإدارة",
+      tone:"green"
     },
-
-
     {
-
       id:"education",
-
       role:"الإشراف التربوي",
-
       name:"أ. محمد صهيوني",
-
-      tone:"green",
-
       category:"الإشراف التربوي",
-
+      tone:"green",
       children:[
-
-
         {
-
           id:"kindergarten",
-
           role:"إشراف مرحلة الروضات",
-
           name:"أ. ماجدة حداد",
-
-          tone:"green",
-
           category:"المراحل التعليمية",
-
+          tone:"green",
           children:[
-
             {
-
               id:"kg-coordinator",
-
               role:"منسق",
-
               name:"",
-
-              tone:"outline",
-
               category:"التنسيق",
-
-              children:[
-
-                {
-
-                  id:"kg-teacher",
-
-                  role:"معلم",
-
-                  name:"",
-
-                  tone:"outline",
-
-                  category:"التعليم"
-
-                }
-
-              ]
-
-            },
-
-
-            {
-
-              id:"activities",
-
-              role:"مسؤولة الأنشطة",
-
-              name:"أ. رحمة كبارة",
-
               tone:"outline",
-
-              category:"الأنشطة"
-
-            }
-
+              children:[
+                {id:"kg-teacher",role:"معلم",name:"",category:"التعليم",tone:"outline"}
+              ]
+            },
+            {id:"activities",role:"مسؤولة الأنشطة",name:"أ. رحمة كبارة",category:"الأنشطة",tone:"outline"}
           ]
-
         },
-
-
         {
-
           id:"primary",
-
           role:"إشراف المرحلة الابتدائية",
-
           name:"أ. زينة ولي الدين",
-
-          tone:"green",
-
           category:"المراحل التعليمية",
-
+          tone:"green",
           children:[
-
             {
-
               id:"primary-coordinator",
-
               role:"منسق",
-
               name:"",
-
-              tone:"outline",
-
               category:"التنسيق",
-
+              tone:"outline",
               children:[
-
-                {
-
-                  id:"primary-teacher",
-
-                  role:"معلم",
-
-                  name:"",
-
-                  tone:"outline",
-
-                  category:"التعليم"
-
-                }
-
+                {id:"primary-teacher",role:"معلم",name:"",category:"التعليم",tone:"outline"}
               ]
-
             },
-
-
-            {
-
-              id:"social",
-
-              role:"عامل صحي اجتماعي",
-
-              name:"أ. هبة شعاع",
-
-              tone:"green",
-
-              category:"الدعم الطلابي"
-
-            }
-
+            {id:"social",role:"عامل صحي اجتماعي",name:"أ. هبة شعاع",category:"الدعم الطلابي",tone:"green"}
           ]
-
         },
-
-
         {
-
           id:"middle-secondary",
-
           role:"إشراف المرحلتين المتوسطة والثانوية",
-
           name:"أ. هويدا ابراهيم",
-
-          tone:"green",
-
           category:"المراحل التعليمية",
-
-          children:[
-
-            {
-
-              id:"ms-coordinator",
-
-              role:"منسق",
-
-              name:"",
-
-              tone:"outline",
-
-              category:"التنسيق",
-
-              children:[
-
-                {
-
-                  id:"ms-teacher",
-
-                  role:"معلم",
-
-                  name:"",
-
-                  tone:"outline",
-
-                  category:"التعليم"
-
-                }
-
-              ]
-
-            },
-
-
-            {
-
-              id:"lab",
-
-              role:"مسؤول مختبر",
-
-              name:"أ. ريما حمود",
-
-              tone:"green",
-
-              category:"المرافق التعليمية"
-
-            }
-
-          ]
-
-        },
-
-
-        {
-
-          id:"support",
-
-          role:"إشراف قسم الدعم التربوي",
-
-          name:"أ. لطيفة مرعب",
-
           tone:"green",
-
-          category:"الدعم التربوي",
-
           children:[
-
             {
-
-              id:"support-teacher",
-
-              role:"معلم مساند",
-
+              id:"ms-coordinator",
+              role:"منسق",
               name:"",
-
+              category:"التنسيق",
               tone:"outline",
-
-              category:"الدعم التربوي",
-
               children:[
-
-                {
-
-                  id:"shadow-teacher",
-
-                  role:"معلم ظل",
-
-                  name:"",
-
-                  tone:"outline",
-
-                  category:"الدعم التربوي"
-
-                }
-
+                {id:"ms-teacher",role:"معلم",name:"",category:"التعليم",tone:"outline"}
               ]
-
             },
-
-
-            {
-
-              id:"library",
-
-              role:"مسؤول مكتبة",
-
-              name:"أ. نهى الزهر",
-
-              tone:"green",
-
-              category:"المرافق التعليمية"
-
-            }
-
+            {id:"lab",role:"مسؤول مختبر",name:"أ. ريما حمود",category:"المرافق التعليمية",tone:"green"}
           ]
-
+        },
+        {
+          id:"support",
+          role:"إشراف قسم الدعم التربوي",
+          name:"أ. لطيفة مرعب",
+          category:"الدعم التربوي",
+          tone:"green",
+          children:[
+            {
+              id:"support-teacher",
+              role:"معلم مساند",
+              name:"",
+              category:"الدعم التربوي",
+              tone:"outline",
+              children:[
+                {id:"shadow-teacher",role:"معلم ظل",name:"",category:"الدعم التربوي",tone:"outline"}
+              ]
+            },
+            {id:"library",role:"مسؤول مكتبة",name:"أ. نهى الزهر",category:"المرافق التعليمية",tone:"green"}
+          ]
         }
-
       ]
-
     }
-
   ]
-
 };
 
+const allNodes=[];
+const nodeMap=new Map();
+const parentMap=new Map();
 
-
-/* =========================================================
-   SVG SETTINGS
-========================================================= */
-
-const SVG_NS =
-  "http://www.w3.org/2000/svg";
-
-
-const CARD_WIDTH =
-  180;
-
-
-const CARD_HEIGHT =
-  74;
-
-
-const HORIZONTAL_GAP =
-  25;
-
-
-const LEVEL_GAP =
-  125;
-
-
-const TOP_PADDING =
-  55;
-
-
-const SIDE_PADDING =
-  70;
-
-
-let currentScale =
-  1;
-
-
-let naturalWidth =
-  0;
-
-
-let naturalHeight =
-  0;
-
-
-
-/* =========================================================
-   INDEX DATA
-========================================================= */
-
-const allNodes =
-  [];
-
-
-const nodeMap =
-  new Map();
-
-
-function indexData(node){
-
+function indexNodes(node,parent=null){
   allNodes.push(node);
+  nodeMap.set(node.id,node);
 
-  nodeMap.set(
-    node.id,
-    node
-  );
+  if(parent){
+    parentMap.set(node.id,parent);
+  }
 
-
-  (node.children || [])
-    .forEach(indexData);
-
+  (node.children||[]).forEach(child=>indexNodes(child,node));
 }
 
+indexNodes(orgData);
 
-indexData(orgData);
+/* DESKTOP TREE */
 
-
-
-/* =========================================================
-   CALCULATE TREE WIDTH
-========================================================= */
-
-function calculateWidth(node){
-
-  if(
-    !node.children ||
-    node.children.length === 0
-  ){
-
-    node._width =
-      CARD_WIDTH;
-
-    return node._width;
-
-  }
-
-
-  let total =
-    0;
-
-
-  node.children.forEach(
-    (child,index) => {
-
-      total +=
-        calculateWidth(child);
-
-      if(
-        index <
-        node.children.length - 1
-      ){
-
-        total +=
-          HORIZONTAL_GAP;
-
-      }
-
-    }
-  );
-
-
-  node._width =
-    Math.max(
-      CARD_WIDTH,
-      total
-    );
-
-
-  return node._width;
-
+function toneClass(tone){
+  if(tone==="mustard") return "mustard";
+  if(tone==="gray") return "gray";
+  if(tone==="outline") return "outline";
+  return "green";
 }
 
+function buildDesktopNode(node){
+  const li=document.createElement("li");
 
+  const btn=document.createElement("button");
+  btn.className=`node-card ${toneClass(node.tone)}`;
 
-/* =========================================================
-   SET POSITIONS
-========================================================= */
+  btn.innerHTML=`
+    <span class="node-role">${node.role}</span>
+    ${node.name?`<span class="node-name">${node.name}</span>`:""}
+  `;
 
-function setPositions(
-  node,
-  left,
-  level
-){
+  btn.onclick=()=>openSheet(node);
 
-  node.x =
-    left
-    +
-    node._width / 2;
+  li.appendChild(btn);
 
+  if(node.children?.length){
+    const ul=document.createElement("ul");
 
-  node.y =
-    TOP_PADDING
-    +
-    level * LEVEL_GAP;
+    node.children.forEach(child=>{
+      ul.appendChild(buildDesktopNode(child));
+    });
 
-
-  if(
-    !node.children ||
-    node.children.length === 0
-  ){
-
-    return;
-
+    li.appendChild(ul);
   }
 
-
-  let totalChildrenWidth =
-    0;
-
-
-  node.children.forEach(
-    (child,index) => {
-
-      totalChildrenWidth +=
-        child._width;
-
-
-      if(
-        index <
-        node.children.length - 1
-      ){
-
-        totalChildrenWidth +=
-          HORIZONTAL_GAP;
-
-      }
-
-    }
-  );
-
-
-  let cursor =
-    left
-    +
-    (
-      node._width
-      -
-      totalChildrenWidth
-    ) / 2;
-
-
-  node.children.forEach(
-    child => {
-
-      setPositions(
-        child,
-        cursor,
-        level + 1
-      );
-
-
-      cursor +=
-        child._width
-        +
-        HORIZONTAL_GAP;
-
-    }
-  );
-
+  return li;
 }
 
+function renderDesktop(){
+  const root=document.createElement("ul");
+  root.className="tree";
+  root.appendChild(buildDesktopNode(orgData));
 
-
-/* =========================================================
-   SVG HELPER
-========================================================= */
-
-function createSvgElement(
-  type,
-  attributes={}
-){
-
-  const element =
-    document.createElementNS(
-      SVG_NS,
-      type
-    );
-
-
-  Object.entries(
-    attributes
-  ).forEach(
-    ([key,value]) => {
-
-      element.setAttribute(
-        key,
-        value
-      );
-
-    }
-  );
-
-
-  return element;
-
+  const holder=document.getElementById("desktopTree");
+  holder.innerHTML="";
+  holder.appendChild(root);
 }
 
+renderDesktop();
 
+/* MOBILE FOCUS */
 
-/* =========================================================
-   COLORS
-========================================================= */
+let currentNode=orgData;
+let currentPath=[orgData];
 
-function getColors(tone){
+function getPathToNode(nodeId){
+  const path=[];
+  let node=nodeMap.get(nodeId);
 
-  if(tone === "root"){
+  if(!node) return [orgData];
 
-    return{
-      fill:"#0b5d42",
-      stroke:"#084d36",
-      text:"#ffffff"
-    };
-
+  while(node){
+    path.unshift(node);
+    node=parentMap.get(node.id);
   }
 
+  return path;
+}
 
-  if(tone === "gray"){
+function renderFocus(){
 
-    return{
-      fill:"#59635e",
-      stroke:"#444e49",
-      text:"#ffffff"
-    };
+  const currentCard=document.getElementById("currentCard");
+  const childrenGrid=document.getElementById("childrenGrid");
+  const breadcrumb=document.getElementById("breadcrumb");
+  const minimapTrack=document.getElementById("minimapTrack");
 
-  }
+  currentCard.innerHTML=`
+    <button class="current-card" id="currentNodeButton">
+      <div class="role">${currentNode.role}</div>
+      <div class="name">${currentNode.name || currentNode.category}</div>
+    </button>
+  `;
 
-
-  if(tone === "mustard"){
-
-    return{
-      fill:"#bd8528",
-      stroke:"#956315",
-      text:"#ffffff"
-    };
-
-  }
-
-
-  if(tone === "outline"){
-
-    return{
-      fill:"#ffffff",
-      stroke:"#19805a",
-      text:"#303833"
-    };
-
-  }
-
-
-  return{
-    fill:"#147c56",
-    stroke:"#0b5d42",
-    text:"#ffffff"
+  document.getElementById("currentNodeButton").onclick=()=>{
+    openSheet(currentNode);
   };
 
-}
+  childrenGrid.innerHTML="";
 
+  if(currentNode.children?.length){
 
+    currentNode.children.forEach(child=>{
 
-/* =========================================================
-   WRAP ROLE TEXT
-========================================================= */
+      const btn=document.createElement("button");
 
-function wrapText(text){
+      btn.className="child-card";
 
-  if(text.length <= 19){
+      btn.innerHTML=`
+        <div class="child-role">${child.role}</div>
+        <div class="child-name">${child.name || child.category}</div>
+        ${child.children?.length ? `<div class="child-arrow">←</div>` : `<div class="child-arrow">i</div>`}
+      `;
 
-    return [text];
+      btn.onclick=()=>{
 
-  }
-
-
-  const words =
-    text.split(" ");
-
-
-  const lines =
-    [""];
-
-
-  words.forEach(
-    word => {
-
-      const currentIndex =
-        lines.length - 1;
-
-
-      const candidate =
-        (
-          lines[currentIndex]
-          +
-          " "
-          +
-          word
-        ).trim();
-
-
-      if(
-        candidate.length <= 20
-      ){
-
-        lines[currentIndex] =
-          candidate;
-
-      }
-      else{
-
-        lines.push(word);
-
-      }
-
-    }
-  );
-
-
-  return lines.slice(0,2);
-
-}
-
-
-
-/* =========================================================
-   CONNECTIONS
-========================================================= */
-
-function drawConnections(
-  svg,
-  node
-){
-
-  if(
-    !node.children ||
-    node.children.length === 0
-  ){
-
-    return;
-
-  }
-
-
-  const startY =
-    node.y
-    +
-    CARD_HEIGHT / 2;
-
-
-  const middleY =
-    startY
-    +
-    (
-      LEVEL_GAP
-      -
-      CARD_HEIGHT
-    ) / 2;
-
-
-  node.children.forEach(
-    child => {
-
-
-      const endY =
-        child.y
-        -
-        CARD_HEIGHT / 2;
-
-
-      const path =
-        createSvgElement(
-          "path",
-          {
-
-            d:
-            `
-              M ${node.x} ${startY}
-              V ${middleY}
-              H ${child.x}
-              V ${endY}
-            `,
-
-            class:
-              "connector"
-
-          }
-        );
-
-
-      svg.appendChild(path);
-
-
-      drawConnections(
-        svg,
-        child
-      );
-
-    }
-  );
-
-}
-
-
-
-/* =========================================================
-   DRAW NODE
-========================================================= */
-
-function drawNode(
-  svg,
-  node
-){
-
-  const colors =
-    getColors(
-      node.tone
-    );
-
-
-  const group =
-    createSvgElement(
-      "g",
-      {
-
-        class:
-          "node-group",
-
-        "data-node-id":
-          node.id
-
-      }
-    );
-
-
-  const x =
-    node.x
-    -
-    CARD_WIDTH / 2;
-
-
-  const y =
-    node.y
-    -
-    CARD_HEIGHT / 2;
-
-
-  const rect =
-    createSvgElement(
-      "rect",
-      {
-
-        x,
-        y,
-
-        width:
-          CARD_WIDTH,
-
-        height:
-          CARD_HEIGHT,
-
-        rx:
-          13,
-
-        fill:
-          colors.fill,
-
-        stroke:
-          colors.stroke,
-
-        class:
-          "node-rect"
-
-      }
-    );
-
-
-  group.appendChild(rect);
-
-
-  const roleLines =
-    wrapText(
-      node.role
-    );
-
-
-  const roleBaseY =
-    node.name
-
-      ?
-
-      node.y - 10
-
-      :
-
-      node.y - 2;
-
-
-  roleLines.forEach(
-    (line,index) => {
-
-
-      const roleText =
-        createSvgElement(
-          "text",
-          {
-
-            x:
-              node.x,
-
-            y:
-              roleBaseY
-              +
-              index * 17,
-
-            "text-anchor":
-              "middle",
-
-            fill:
-              colors.text,
-
-            direction:
-              "rtl",
-
-            class:
-              "role-text"
-
-          }
-        );
-
-
-      roleText.textContent =
-        line;
-
-
-      group.appendChild(
-        roleText
-      );
-
-    }
-  );
-
-
-  if(node.name){
-
-
-    const nameText =
-      createSvgElement(
-        "text",
-        {
-
-          x:
-            node.x,
-
-          y:
-            node.y + 23,
-
-          "text-anchor":
-            "middle",
-
-          fill:
-            colors.text,
-
-          direction:
-            "rtl",
-
-          class:
-            "name-text",
-
-          opacity:
-            ".9"
-
+        if(child.children?.length){
+          goToNode(child);
+        }else{
+          openSheet(child);
         }
+
+      };
+
+      childrenGrid.appendChild(btn);
+
+    });
+
+  }else{
+
+    childrenGrid.innerHTML=`
+      <div class="no-children" style="grid-column:1/-1">
+        لا توجد مناصب تابعة مباشرة لهذا المستوى.
+        اضغط على البطاقة أعلاه لعرض التفاصيل.
+      </div>
+    `;
+
+  }
+
+  breadcrumb.innerHTML="";
+
+  currentPath.forEach((node,index)=>{
+
+    const btn=document.createElement("button");
+
+    btn.className=
+      "crumb"
+      +
+      (
+        index===currentPath.length-1
+        ?
+        " active"
+        :
+        ""
       );
 
+    btn.textContent=node.role;
 
-    nameText.textContent =
-      node.name;
+    btn.onclick=()=>{
 
+      currentNode=node;
+      currentPath=currentPath.slice(0,index+1);
 
-    group.appendChild(
-      nameText
-    );
+      animateFocus();
+    };
 
-  }
-
-
-  group.addEventListener(
-    "click",
-    event => {
-
-      event.stopPropagation();
-
-      openModal(node);
-
-    }
-  );
-
-
-  svg.appendChild(group);
-
-
-  (node.children || [])
-    .forEach(
-      child => {
-
-        drawNode(
-          svg,
-          child
-        );
-
-      }
-    );
-
-}
-
-
-
-/* =========================================================
-   TREE DEPTH
-========================================================= */
-
-function getDepth(
-  node,
-  level=0
-){
-
-  let deepest =
-    level;
-
-
-  (node.children || [])
-    .forEach(
-      child => {
-
-        deepest =
-          Math.max(
-            deepest,
-            getDepth(
-              child,
-              level + 1
-            )
-          );
-
-      }
-    );
-
-
-  return deepest;
-
-}
-
-
-
-/* =========================================================
-   DRAW CHART
-========================================================= */
-
-function drawChart(){
-
-  calculateWidth(
-    orgData
-  );
-
-
-  setPositions(
-    orgData,
-    SIDE_PADDING,
-    0
-  );
-
-
-  const depth =
-    getDepth(
-      orgData
-    );
-
-
-  naturalWidth =
-    orgData._width
-    +
-    SIDE_PADDING * 2;
-
-
-  naturalHeight =
-    TOP_PADDING
-    +
-    depth * LEVEL_GAP
-    +
-    CARD_HEIGHT
-    +
-    70;
-
-
-  const svg =
-    document.getElementById(
-      "orgSvg"
-    );
-
-
-  svg.innerHTML =
-    "";
-
-
-  svg.setAttribute(
-    "viewBox",
-    `0 0 ${naturalWidth} ${naturalHeight}`
-  );
-
-
-  drawConnections(
-    svg,
-    orgData
-  );
-
-
-  drawNode(
-    svg,
-    orgData
-  );
-
-
-  applyScale();
-
-}
-
-
-
-/* =========================================================
-   SCALE
-========================================================= */
-
-function applyScale(){
-
-  const svg =
-    document.getElementById(
-      "orgSvg"
-    );
-
-
-  svg.setAttribute(
-    "width",
-    naturalWidth *
-    currentScale
-  );
-
-
-  svg.setAttribute(
-    "height",
-    naturalHeight *
-    currentScale
-  );
-
-
-  document.getElementById(
-    "resetZoom"
-  ).textContent =
-    Math.round(
-      currentScale * 100
-    )
-    +
-    "%";
-
-}
-
-
-
-function setScale(
-  newScale
-){
-
-  const viewport =
-    document.getElementById(
-      "viewport"
-    );
-
-
-  const centerX =
-    viewport.scrollLeft
-    +
-    viewport.clientWidth / 2;
-
-
-  const centerY =
-    viewport.scrollTop
-    +
-    viewport.clientHeight / 2;
-
-
-  const oldScale =
-    currentScale;
-
-
-  currentScale =
-    Math.max(
-      .55,
-      Math.min(
-        1.6,
-        newScale
-      )
-    );
-
-
-  applyScale();
-
-
-  const ratio =
-    currentScale
-    /
-    oldScale;
-
-
-  requestAnimationFrame(
-    () => {
-
-      viewport.scrollLeft =
-        centerX * ratio
-        -
-        viewport.clientWidth / 2;
-
-
-      viewport.scrollTop =
-        centerY * ratio
-        -
-        viewport.clientHeight / 2;
-
-    }
-  );
-
-}
-
-
-
-/* =========================================================
-   AUTO MOBILE SCALE
-========================================================= */
-
-function chooseInitialScale(){
-
-  if(
-    window.innerWidth <= 700
-  ){
-
-    /*
-      على الهاتف:
-      البطاقة تقريباً 125 - 145px
-      بعد التصغير
-    */
-
-    currentScale =
-      .78;
-
-  }
-  else{
-
-    currentScale =
-      .92;
-
-  }
-
-
-  applyScale();
-
-}
-
-
-
-/* =========================================================
-   CENTER ON NODE
-========================================================= */
-
-function centerOnNode(
-  nodeId,
-  smooth=true
-){
-
-  const node =
-    nodeMap.get(
-      nodeId
-    );
-
-
-  if(!node)
-    return;
-
-
-  const viewport =
-    document.getElementById(
-      "viewport"
-    );
-
-
-  const targetLeft =
-    node.x *
-    currentScale
-    -
-    viewport.clientWidth / 2;
-
-
-  const targetTop =
-    node.y *
-    currentScale
-    -
-    viewport.clientHeight / 3;
-
-
-  viewport.scrollTo({
-
-    left:
-      Math.max(
-        0,
-        targetLeft
-      ),
-
-    top:
-      Math.max(
-        0,
-        targetTop
-      ),
-
-    behavior:
-      smooth
-      ?
-      "smooth"
-      :
-      "auto"
+    breadcrumb.appendChild(btn);
 
   });
 
+  minimapTrack.innerHTML="";
+
+  currentPath.forEach((node,index)=>{
+
+    if(index>0){
+      const line=document.createElement("div");
+      line.className="map-line";
+      minimapTrack.appendChild(line);
+    }
+
+    const dot=document.createElement("div");
+    dot.className=
+      "map-dot"
+      +
+      (
+        index===currentPath.length-1
+        ?
+        " active"
+        :
+        ""
+      );
+
+    minimapTrack.appendChild(dot);
+
+  });
+
+  document.getElementById("backBtn").disabled=
+    currentPath.length===1;
 }
 
+function animateFocus(){
 
+  const stage=document.querySelector(".focus-stage");
 
-/* =========================================================
-   ZOOM BUTTONS
-========================================================= */
-
-document.getElementById(
-  "zoomIn"
-).onclick = () => {
-
-  setScale(
-    currentScale + .1
+  stage.animate(
+    [
+      {opacity:.25,transform:"translateX(-18px)"},
+      {opacity:1,transform:"translateX(0)"}
+    ],
+    {
+      duration:220,
+      easing:"ease-out"
+    }
   );
 
+  renderFocus();
+}
+
+function goToNode(node){
+  currentNode=node;
+  currentPath=getPathToNode(node.id);
+  animateFocus();
+}
+
+document.getElementById("backBtn").onclick=()=>{
+
+  if(currentPath.length<=1) return;
+
+  currentPath.pop();
+
+  currentNode=currentPath[currentPath.length-1];
+
+  animateFocus();
 };
 
-
-document.getElementById(
-  "zoomOut"
-).onclick = () => {
-
-  setScale(
-    currentScale - .1
-  );
-
+document.getElementById("rootBtn").onclick=()=>{
+  currentNode=orgData;
+  currentPath=[orgData];
+  animateFocus();
 };
 
+renderFocus();
 
-document.getElementById(
-  "resetZoom"
-).onclick = () => {
+/* BOTTOM SHEET */
 
-  currentScale =
-    window.innerWidth <= 700
+const sheet=document.getElementById("sheet");
 
-      ?
+let sheetNode=null;
 
-      .78
+function openSheet(node){
+  sheetNode=node;
 
-      :
+  document.getElementById("sheetCategory").textContent=
+    node.category || "";
 
-      .92;
-
-
-  applyScale();
-
-
-  setTimeout(
-    () => {
-
-      centerOnNode(
-        "manager"
-      );
-
-    },
-    30
-  );
-
-};
-
-
-document.getElementById(
-  "goManager"
-).onclick = () => {
-
-  centerOnNode(
-    "manager"
-  );
-
-};
-
-
-
-/* =========================================================
-   MOUSE DRAG
-========================================================= */
-
-const viewport =
-  document.getElementById(
-    "viewport"
-  );
-
-
-let mouseDown =
-  false;
-
-
-let mouseStartX =
-  0;
-
-
-let mouseStartY =
-  0;
-
-
-let scrollStartX =
-  0;
-
-
-let scrollStartY =
-  0;
-
-
-viewport.addEventListener(
-  "mousedown",
-  event => {
-
-    mouseDown =
-      true;
-
-
-    viewport
-      .classList
-      .add(
-        "dragging"
-      );
-
-
-    mouseStartX =
-      event.pageX;
-
-
-    mouseStartY =
-      event.pageY;
-
-
-    scrollStartX =
-      viewport.scrollLeft;
-
-
-    scrollStartY =
-      viewport.scrollTop;
-
-  }
-);
-
-
-window.addEventListener(
-  "mouseup",
-  () => {
-
-    mouseDown =
-      false;
-
-
-    viewport
-      .classList
-      .remove(
-        "dragging"
-      );
-
-  }
-);
-
-
-viewport.addEventListener(
-  "mousemove",
-  event => {
-
-    if(!mouseDown)
-      return;
-
-
-    event.preventDefault();
-
-
-    const dx =
-      event.pageX
-      -
-      mouseStartX;
-
-
-    const dy =
-      event.pageY
-      -
-      mouseStartY;
-
-
-    viewport.scrollLeft =
-      scrollStartX
-      -
-      dx;
-
-
-    viewport.scrollTop =
-      scrollStartY
-      -
-      dy;
-
-  }
-);
-
-
-
-/* =========================================================
-   WHEEL ZOOM
-========================================================= */
-
-viewport.addEventListener(
-  "wheel",
-  event => {
-
-    if(
-      !event.ctrlKey &&
-      !event.metaKey
-    ){
-
-      return;
-
-    }
-
-
-    event.preventDefault();
-
-
-    if(
-      event.deltaY < 0
-    ){
-
-      setScale(
-        currentScale + .08
-      );
-
-    }
-    else{
-
-      setScale(
-        currentScale - .08
-      );
-
-    }
-
-  },
-  {
-    passive:false
-  }
-);
-
-
-
-/* =========================================================
-   PINCH ZOOM
-========================================================= */
-
-let pinchDistance =
-  null;
-
-
-let pinchScale =
-  null;
-
-
-viewport.addEventListener(
-  "touchstart",
-  event => {
-
-    if(
-      event.touches.length === 2
-    ){
-
-      const a =
-        event.touches[0];
-
-
-      const b =
-        event.touches[1];
-
-
-      pinchDistance =
-        Math.hypot(
-          a.clientX - b.clientX,
-          a.clientY - b.clientY
-        );
-
-
-      pinchScale =
-        currentScale;
-
-    }
-
-  },
-  {
-    passive:true
-  }
-);
-
-
-viewport.addEventListener(
-  "touchmove",
-  event => {
-
-    if(
-      event.touches.length !== 2
-      ||
-      pinchDistance === null
-    ){
-
-      return;
-
-    }
-
-
-    event.preventDefault();
-
-
-    const a =
-      event.touches[0];
-
-
-    const b =
-      event.touches[1];
-
-
-    const distance =
-      Math.hypot(
-        a.clientX - b.clientX,
-        a.clientY - b.clientY
-      );
-
-
-    const ratio =
-      distance /
-      pinchDistance;
-
-
-    currentScale =
-      Math.max(
-        .55,
-        Math.min(
-          1.6,
-          pinchScale * ratio
-        )
-      );
-
-
-    applyScale();
-
-  },
-  {
-    passive:false
-  }
-);
-
-
-viewport.addEventListener(
-  "touchend",
-  event => {
-
-    if(
-      event.touches.length < 2
-    ){
-
-      pinchDistance =
-        null;
-
-
-      pinchScale =
-        null;
-
-    }
-
-  }
-);
-
-
-
-/* =========================================================
-   MODAL
-========================================================= */
-
-const modal =
-  document.getElementById(
-    "modal"
-  );
-
-
-function openModal(node){
-
-  document.getElementById(
-    "modalCategory"
-  ).textContent =
-    node.category;
-
-
-  document.getElementById(
-    "modalRole"
-  ).textContent =
+  document.getElementById("sheetRole").textContent=
     node.role;
 
+  document.getElementById("sheetName").textContent=
+    node.name || "لا يوجد اسم محدد";
 
-  document.getElementById(
-    "modalName"
-  ).textContent =
-    node.name || "—";
+  const openBtn=
+    document.getElementById("sheetOpenChildren");
 
+  if(node.children?.length){
 
-  modal
-    .classList
-    .remove(
-      "hidden"
-    );
+    openBtn.style.display="block";
 
-}
+    openBtn.textContent="عرض التابعين";
 
+  }else{
 
-function closeModal(){
-
-  modal
-    .classList
-    .add(
-      "hidden"
-    );
-
-}
-
-
-document.getElementById(
-  "modalClose"
-).onclick =
-  closeModal;
-
-
-document.getElementById(
-  "modalOverlay"
-).onclick =
-  closeModal;
-
-
-
-/* =========================================================
-   SEARCH
-========================================================= */
-
-function normalizeArabic(text){
-
-  return String(text)
-
-    .toLowerCase()
-
-    .replace(
-      /[إأآ]/g,
-      "ا"
-    )
-
-    .replace(
-      /ى/g,
-      "ي"
-    )
-
-    .replace(
-      /ة/g,
-      "ه"
-    )
-
-    .replace(
-      /ؤ/g,
-      "و"
-    )
-
-    .replace(
-      /ئ/g,
-      "ي"
-    )
-
-    .replace(
-      /\s+/g,
-      " "
-    )
-
-    .trim();
-
-}
-
-
-
-const searchInput =
-  document.getElementById(
-    "searchInput"
-  );
-
-
-const searchResults =
-  document.getElementById(
-    "searchResults"
-  );
-
-
-
-function removeHighlights(){
-
-  document
-    .querySelectorAll(
-      ".node-highlight"
-    )
-    .forEach(
-      item => {
-
-        item
-          .classList
-          .remove(
-            "node-highlight"
-          );
-
-      }
-    );
-
-}
-
-
-
-function focusNode(
-  nodeId
-){
-
-  removeHighlights();
-
-
-  const group =
-    document.querySelector(
-      `[data-node-id="${nodeId}"]`
-    );
-
-
-  if(group){
-
-    group
-      .classList
-      .add(
-        "node-highlight"
-      );
+    openBtn.style.display="none";
 
   }
 
-
-  centerOnNode(
-    nodeId
-  );
-
-
-  setTimeout(
-    removeHighlights,
-    3000
-  );
-
+  sheet.classList.remove("hidden");
 }
 
+function closeSheet(){
+  sheet.classList.add("hidden");
+}
 
+document.getElementById("sheetClose").onclick=closeSheet;
+document.getElementById("sheetOverlay").onclick=closeSheet;
 
-searchInput.addEventListener(
-  "input",
-  () => {
+document.getElementById("sheetOpenChildren").onclick=()=>{
 
-
-    const query =
-      normalizeArabic(
-        searchInput.value
-      );
-
-
-    if(!query){
-
-      searchResults.hidden =
-        true;
-
-      return;
-
-    }
-
-
-    const matches =
-      allNodes.filter(
-        node => {
-
-
-          const searchable =
-            normalizeArabic(
-              (
-                node.role || ""
-              )
-              +
-              " "
-              +
-              (
-                node.name || ""
-              )
-              +
-              " "
-              +
-              (
-                node.category || ""
-              )
-            );
-
-
-          return searchable.includes(
-            query
-          );
-
-        }
-      );
-
-
-    searchResults.hidden =
-      false;
-
-
-    const grid =
-      document.createElement(
-        "div"
-      );
-
-
-    grid.className =
-      "results-grid";
-
-
-    if(
-      matches.length === 0
-    ){
-
-      grid.innerHTML =
-      `
-        <div class="result-item">
-          <strong>
-            لا توجد نتيجة
-          </strong>
-
-          <span>
-            جرّب كتابة جزء من الاسم أو المسمى الوظيفي
-          </span>
-        </div>
-      `;
-
-    }
-
-
-    matches.forEach(
-      node => {
-
-
-        const item =
-          document.createElement(
-            "button"
-          );
-
-
-        item.type =
-          "button";
-
-
-        item.className =
-          "result-item";
-
-
-        item.innerHTML =
-        `
-          <strong>
-            ${node.role}
-          </strong>
-
-          <span>
-            ${node.name || node.category}
-          </span>
-        `;
-
-
-        item.onclick =
-          () => {
-
-            focusNode(
-              node.id
-            );
-
-          };
-
-
-        grid.appendChild(
-          item
-        );
-
-      }
-    );
-
-
-    searchResults.innerHTML =
-      "";
-
-
-    searchResults.appendChild(
-      grid
-    );
-
+  if(sheetNode?.children?.length){
+    closeSheet();
+    goToNode(sheetNode);
   }
-);
-
-
-
-document.getElementById(
-  "clearSearch"
-).onclick = () => {
-
-  searchInput.value =
-    "";
-
-  searchResults.hidden =
-    true;
-
-  removeHighlights();
 
 };
 
+/* SEARCH */
 
+function normalizeArabic(text){
+  return String(text)
+    .toLowerCase()
+    .replace(/[إأآ]/g,"ا")
+    .replace(/ى/g,"ي")
+    .replace(/ة/g,"ه")
+    .replace(/ؤ/g,"و")
+    .replace(/ئ/g,"ي")
+    .replace(/\s+/g," ")
+    .trim();
+}
 
-/* =========================================================
-   INIT
-========================================================= */
+const searchInput=document.getElementById("searchInput");
+const searchResults=document.getElementById("searchResults");
 
-drawChart();
+searchInput.addEventListener("input",()=>{
 
+  const q=normalizeArabic(searchInput.value);
 
-chooseInitialScale();
+  if(!q){
+    searchResults.hidden=true;
+    return;
+  }
 
-
-window.addEventListener(
-  "load",
-  () => {
-
-    setTimeout(
-      () => {
-
-        centerOnNode(
-          "manager",
-          false
-        );
-
-      },
-      200
+  const matches=allNodes.filter(node=>{
+    const text=normalizeArabic(
+      `${node.role} ${node.name||""} ${node.category||""}`
     );
 
+    return text.includes(q);
+  });
+
+  searchResults.hidden=false;
+
+  const grid=document.createElement("div");
+  grid.className="results-grid";
+
+  if(!matches.length){
+    grid.innerHTML=`
+      <div class="result-item">
+        <strong>لا توجد نتيجة</strong>
+        <span>جرّب كتابة جزء من الاسم أو الوظيفة</span>
+      </div>
+    `;
   }
-);
 
+  matches.forEach(node=>{
 
-window.addEventListener(
-  "resize",
-  () => {
+    const btn=document.createElement("button");
+    btn.className="result-item";
 
-    /*
-      فقط نحافظ على مكان منطقي
-      بدون إعادة رسم كل شيء
-    */
+    btn.innerHTML=`
+      <strong>${node.role}</strong>
+      <span>${node.name || node.category}</span>
+    `;
 
-    setTimeout(
-      () => {
+    btn.onclick=()=>{
 
-        centerOnNode(
-          "manager",
-          false
-        );
+      if(window.innerWidth<=700){
 
-      },
-      100
-    );
+        goToNode(node);
 
-  }
-);
+        setTimeout(()=>{
+          document.querySelector(".mobile-focus")
+            .scrollIntoView({behavior:"smooth",block:"start"});
+        },50);
 
+      }else{
+
+        openSheet(node);
+
+      }
+
+    };
+
+    grid.appendChild(btn);
+
+  });
+
+  searchResults.innerHTML="";
+  searchResults.appendChild(grid);
+
+});
+
+document.getElementById("clearSearch").onclick=()=>{
+
+  searchInput.value="";
+  searchResults.hidden=true;
+
+};
 </script>
 
 </body>
