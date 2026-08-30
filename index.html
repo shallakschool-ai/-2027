@@ -1,1159 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>الهيكلية الإدارية | ثانوية الجنان 2026-2027</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --green:#147c56;
-  --green-dark:#0b5d42;
-  --green-light:#249268;
-  --gray:#6f7973;
-  --gray-dark:#303833;
-  --gray-light:#eef2ef;
-  --mustard:#b98227;
-  --mustard-dark:#936115;
-  --mustard-light:#fbf2df;
-  --white:#ffffff;
-  --line:#bac7c0;
-  --shadow:0 14px 40px rgba(22,55,40,.11);
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:"Cairo",Arial,sans-serif;
-  color:var(--gray-dark);
-  background:
-    radial-gradient(circle at 95% 0%,rgba(20,124,86,.10),transparent 450px),
-    radial-gradient(circle at 5% 15%,rgba(185,130,39,.08),transparent 400px),
-    #f4f7f5;
-}
-
-button,
-input{
-  font-family:inherit;
-}
-
-button{
-  cursor:pointer;
-}
-
-.page{
-  width:min(1500px,calc(100% - 30px));
-  margin:auto;
-  padding-bottom:55px;
-}
-
-/* HEADER */
-
-header{
-  min-height:92px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:13px;
-}
-
-.logo{
-  width:64px;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:18px;
-  background:#ffffff;
-  box-shadow:0 10px 30px rgba(20,70,48,.16);
-  overflow:hidden;
-  padding:6px;
-  border:1px solid rgba(20,124,86,.10);
-}
-
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-}
-
-.brand-sub{
-  margin:0;
-  color:var(--green);
-  font-size:11px;
-  font-weight:800;
-}
-
-.brand-title{
-  margin:2px 0 0;
-  font-size:20px;
-}
-
-/* HERO */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-  min-height:190px;
-  display:flex;
-  align-items:center;
-  padding:38px;
-  border-radius:27px;
-  background:linear-gradient(120deg,#ffffff,#edf6f1);
-  box-shadow:var(--shadow);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:800px;
-}
-
-.year{
-  display:inline-flex;
-  padding:7px 15px;
-  border-radius:50px;
-  background:var(--mustard-light);
-  color:var(--mustard-dark);
-  font-size:12px;
-  font-weight:800;
-}
-
-.hero h1{
-  margin:13px 0 5px;
-  font-size:clamp(28px,4vw,48px);
-  line-height:1.3;
-}
-
-.hero p{
-  margin:0;
-  color:var(--gray);
-  font-size:13px;
-  line-height:1.9;
-}
-
-.hero-decoration{
-  position:absolute;
-  width:300px;
-  height:300px;
-  left:-90px;
-  top:-100px;
-  border-radius:50%;
-  border:42px solid rgba(20,124,86,.05);
-  box-shadow:
-    0 0 0 42px rgba(185,130,39,.035),
-    0 0 0 84px rgba(20,124,86,.02);
-}
-
-/* SEARCH */
-
-.toolbar{
-  margin:18px 0;
-  padding:11px;
-  display:flex;
-  align-items:center;
-  border-radius:17px;
-  background:rgba(255,255,255,.95);
-  box-shadow:0 8px 30px rgba(20,55,38,.07);
-}
-
-.search-box{
-  width:100%;
-  display:flex;
-  align-items:center;
-  gap:9px;
-}
-
-.search-icon{
-  color:var(--green);
-  font-size:20px;
-}
-
-.search-box input{
-  width:100%;
-  border:0;
-  outline:0;
-  background:transparent;
-  color:var(--gray-dark);
-  font-size:13px;
-}
-
-.clear-btn{
-  width:33px;
-  height:33px;
-  flex:0 0 33px;
-  border:0;
-  border-radius:50%;
-  background:var(--gray-light);
-  color:var(--gray);
-  font-size:17px;
-}
-
-.results{
-  margin-bottom:16px;
-  padding:11px;
-  border-radius:17px;
-  background:white;
-  box-shadow:0 8px 28px rgba(20,55,38,.07);
-}
-
-.results-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:8px;
-}
-
-.result-item{
-  padding:11px 12px;
-  text-align:right;
-  border:1px solid #e2e8e4;
-  border-radius:12px;
-  background:#f5f8f6;
-}
-
-.result-item:hover{
-  border-color:rgba(20,124,86,.4);
-}
-
-.result-item strong{
-  display:block;
-  color:var(--green-dark);
-  font-size:12px;
-}
-
-.result-item span{
-  color:var(--gray);
-  font-size:10px;
-}
-
-/* DESKTOP CHART */
-
-.desktop-chart{
-  background:white;
-  border-radius:25px;
-  padding:22px;
-  box-shadow:var(--shadow);
-}
-
-.section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  margin-bottom:17px;
-}
-
-.section-eyebrow{
-  color:var(--green);
-  font-size:10px;
-  font-weight:800;
-}
-
-.section-head h2{
-  margin:2px 0 0;
-  font-size:22px;
-}
-
-.desktop-hint{
-  color:var(--gray);
-  font-size:10px;
-}
-
-.tree-wrap{
-  overflow:auto;
-  direction:ltr;
-  padding:25px 10px 45px;
-  border-radius:18px;
-  background:
-    linear-gradient(rgba(20,124,86,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(20,124,86,.025) 1px,transparent 1px),
-    #fafcfb;
-  background-size:28px 28px;
-  border:1px solid #edf1ee;
-}
-
-.tree,
-.tree ul{
-  position:relative;
-  margin:0;
-  padding:0;
-  list-style:none;
-  text-align:center;
-}
-
-.tree{
-  direction:ltr;
-  display:flex;
-  justify-content:center;
-  min-width:max-content;
-}
-
-.tree ul{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  padding-top:38px;
-}
-
-.tree li{
-  position:relative;
-  padding:38px 3px 0;
-  flex:0 0 auto;
-}
-
-.tree > li{
-  padding-top:0;
-}
-
-.tree li::before,
-.tree li::after{
-  content:"";
-  position:absolute;
-  top:18px;
-  width:50%;
-  height:20px;
-  border-top:2px solid var(--line);
-}
-
-.tree li::before{
-  right:50%;
-}
-
-.tree li::after{
-  left:50%;
-  border-right:2px solid var(--line);
-}
-
-.tree li:first-child::before{
-  border:none;
-}
-
-.tree li:last-child::after{
-  border:none;
-}
-
-.tree li:only-child::before,
-.tree li:only-child::after{
-  display:none;
-}
-
-.tree ul::before{
-  content:"";
-  position:absolute;
-  top:0;
-  right:50%;
-  height:38px;
-  border-right:2px solid var(--line);
-}
-
-.node-card{
-  direction:rtl;
-  width:175px;
-  min-height:85px;
-  border:0;
-  border-radius:15px;
-  padding:12px 10px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:4px;
-  box-shadow:0 8px 22px rgba(22,49,36,.12);
-  transition:transform .2s,box-shadow .2s;
-}
-
-.node-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 13px 25px rgba(22,49,36,.17);
-}
-
-.node-role{
-  font-size:11.5px;
-  font-weight:800;
-  line-height:1.55;
-}
-
-.node-name{
-  font-size:10px;
-  opacity:.92;
-}
-
-.green{
-  background:linear-gradient(145deg,var(--green-light),var(--green-dark));
-  color:white;
-}
-
-.mustard{
-  background:linear-gradient(145deg,#c78f32,var(--mustard-dark));
-  color:white;
-}
-
-.gray{
-  background:linear-gradient(145deg,#6b7570,#464e4a);
-  color:white;
-}
-
-.outline{
-  background:white;
-  color:var(--gray-dark);
-  border:1.7px solid var(--green);
-}
-
-/* MOBILE FOCUS */
-
-.mobile-focus{
-  display:none;
-}
-
-.focus-shell{
-  padding:15px;
-  border-radius:25px;
-  background:white;
-  box-shadow:var(--shadow);
-}
-
-.focus-top{
-  margin-bottom:12px;
-}
-
-.focus-eyebrow{
-  color:var(--green);
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:.8px;
-}
-
-.focus-title{
-  margin:2px 0 0;
-  font-size:19px;
-}
-
-.mobile-guide{
-  margin-top:4px;
-  color:var(--gray);
-  font-size:9px;
-}
-
-.breadcrumb{
-  display:flex;
-  flex-wrap:nowrap;
-  gap:6px;
-  overflow-x:auto;
-  padding:3px 0 12px;
-  scrollbar-width:none;
-}
-
-.breadcrumb::-webkit-scrollbar{
-  display:none;
-}
-
-.crumb{
-  flex:0 0 auto;
-  padding:6px 10px;
-  border:0;
-  border-radius:50px;
-  background:var(--gray-light);
-  color:var(--gray-dark);
-  font-size:9px;
-  font-weight:700;
-}
-
-.crumb.active{
-  background:var(--green);
-  color:white;
-}
-
-.focus-stage{
-  position:relative;
-  overflow:hidden;
-  min-height:490px;
-  padding:22px 13px 17px;
-  border-radius:22px;
-  background:
-    radial-gradient(circle at 50% 3%,rgba(20,124,86,.09),transparent 220px),
-    #f9fbfa;
-  border:1px solid #edf1ee;
-}
-
-.current-card{
-  width:min(315px,92%);
-  min-height:100px;
-  margin:auto;
-  padding:17px 14px;
-  border:0;
-  border-radius:21px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  color:white;
-  background:linear-gradient(145deg,var(--green-light),var(--green-dark));
-  box-shadow:0 14px 30px rgba(20,70,48,.19);
-}
-
-.current-card.mustard-current{
-  background:linear-gradient(145deg,#c78f32,var(--mustard-dark));
-}
-
-.current-card.gray-current{
-  background:linear-gradient(145deg,#69736e,#464e4a);
-}
-
-.current-card .role{
-  font-size:17px;
-  line-height:1.5;
-  font-weight:800;
-}
-
-.current-card .name{
-  margin-top:5px;
-  font-size:11px;
-  opacity:.92;
-}
-
-.current-category{
-  margin-top:6px;
-  font-size:8px;
-  opacity:.7;
-}
-
-.branch-line{
-  width:2px;
-  height:35px;
-  margin:auto;
-  background:var(--line);
-}
-
-.children-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-
-.child-card{
-  position:relative;
-  min-height:112px;
-  padding:13px 9px;
-  border:1px solid #dfe8e3;
-  border-radius:18px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:white;
-  color:var(--gray-dark);
-  box-shadow:0 7px 20px rgba(22,49,36,.075);
-  transition:transform .17s,border-color .17s;
-}
-
-.child-card:active{
-  transform:scale(.975);
-}
-
-.child-card.has-children{
-  border-color:rgba(20,124,86,.28);
-}
-
-.child-card.finance-child{
-  border-color:rgba(185,130,39,.38);
-  background:linear-gradient(150deg,white,#fffaf2);
-}
-
-.child-role{
-  font-size:11.5px;
-  font-weight:800;
-  line-height:1.5;
-}
-
-.child-name{
-  margin-top:5px;
-  color:var(--gray);
-  font-size:9.5px;
-}
-
-.child-arrow{
-  width:27px;
-  height:27px;
-  margin-top:9px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:var(--gray-light);
-  color:var(--green);
-  font-size:12px;
-  font-weight:800;
-}
-
-.finance-child .child-arrow{
-  color:var(--mustard-dark);
-  background:var(--mustard-light);
-}
-
-.no-children{
-  grid-column:1/-1;
-  padding:35px 15px;
-  color:var(--gray);
-  text-align:center;
-  font-size:11px;
-  line-height:1.9;
-}
-
-.focus-actions{
-  display:flex;
-  gap:8px;
-  margin-top:14px;
-}
-
-.focus-btn{
-  flex:1;
-  padding:11px 12px;
-  border:0;
-  border-radius:14px;
-  background:var(--gray-light);
-  color:var(--gray-dark);
-  font-size:10px;
-  font-weight:700;
-}
-
-.focus-btn.primary{
-  background:var(--green);
-  color:white;
-}
-
-.focus-btn:disabled{
-  opacity:.35;
-}
-
-.minimap{
-  margin-top:13px;
-  padding:11px;
-  border-radius:16px;
-  background:#f4f7f5;
-  border:1px solid #e6ece8;
-}
-
-.minimap-title{
-  margin-bottom:9px;
-  color:var(--gray);
-  font-size:8px;
-  text-align:center;
-}
-
-.minimap-track{
-  min-height:28px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  direction:ltr;
-  gap:6px;
-}
-
-.map-dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#c9d4ce;
-}
-
-.map-dot.active{
-  width:12px;
-  height:12px;
-  background:var(--green);
-  box-shadow:0 0 0 5px rgba(20,124,86,.10);
-}
-
-.map-line{
-  width:20px;
-  height:2px;
-  background:#c9d4ce;
-}
-
-/* VISION */
-
-.vision{
-  margin-top:18px;
-  padding:18px;
-  display:flex;
-  align-items:center;
-  gap:13px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#fff,var(--mustard-light));
-  border:1px solid rgba(185,130,39,.24);
-}
-
-.vision-icon{
-  width:42px;
-  height:42px;
-  flex:0 0 42px;
-  display:grid;
-  place-items:center;
-  border-radius:13px;
-  background:var(--mustard);
-  color:white;
-  font-size:18px;
-}
-
-.vision p{
-  margin:0;
-  font-size:12px;
-  line-height:1.9;
-}
-
-/* SHEET */
-
-.sheet{
-  position:fixed;
-  inset:0;
-  z-index:500;
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-}
-
-.sheet.hidden{
-  display:none;
-}
-
-.sheet-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(12,28,20,.45);
-  backdrop-filter:blur(5px);
-}
-
-.sheet-card{
-  position:relative;
-  z-index:2;
-  width:min(620px,100%);
-  padding:11px 18px 26px;
-  border-radius:27px 27px 0 0;
-  background:white;
-  box-shadow:0 -20px 60px rgba(15,40,28,.20);
-  animation:sheetUp .25s ease;
-}
-
-@keyframes sheetUp{
-  from{transform:translateY(100%);}
-  to{transform:translateY(0);}
-}
-
-.sheet-handle{
-  width:48px;
-  height:5px;
-  margin:0 auto 18px;
-  border-radius:50px;
-  background:#d7dfda;
-}
-
-.sheet-category{
-  color:var(--mustard);
-  font-size:10px;
-  font-weight:800;
-}
-
-.sheet-card h3{
-  margin:6px 0 3px;
-  color:var(--green-dark);
-  font-size:21px;
-}
-
-.sheet-name{
-  margin:0;
-  color:var(--gray);
-  font-size:12px;
-}
-
-.sheet-buttons{
-  display:flex;
-  gap:8px;
-  margin-top:20px;
-}
-
-.sheet-btn{
-  flex:1;
-  padding:11px 12px;
-  border:0;
-  border-radius:14px;
-  background:var(--gray-light);
-  color:var(--gray-dark);
-  font-size:10px;
-  font-weight:700;
-}
-
-.sheet-btn.primary{
-  background:var(--green);
-  color:white;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-  .page{
-    width:100%;
-    padding:0 8px 38px;
-  }
-
-  header{
-    min-height:72px;
-    padding:7px 3px;
-  }
-
-  .logo{
-    width:50px;
-    height:50px;
-    border-radius:14px;
-    padding:4px;
-  }
-
-  .brand-title{
-    font-size:14px;
-  }
-
-  .brand-sub{
-    font-size:8.5px;
-  }
-
-  .hero{
-    min-height:auto;
-    padding:20px 17px;
-    border-radius:20px;
-  }
-
-  .year{
-    padding:5px 10px;
-    font-size:9px;
-  }
-
-  .hero h1{
-    margin:9px 0 3px;
-    font-size:24px;
-  }
-
-  .hero p{
-    font-size:9.5px;
-    line-height:1.8;
-  }
-
-  .hero-decoration{
-    width:180px;
-    height:180px;
-    left:-70px;
-    top:-70px;
-  }
-
-  .toolbar{
-    margin:11px 0;
-    padding:9px;
-  }
-
-  .search-box input{
-    font-size:11px;
-  }
-
-  .desktop-chart{
-    display:none;
-  }
-
-  .mobile-focus{
-    display:block;
-  }
-
-  .focus-shell{
-    padding:11px;
-    border-radius:21px;
-  }
-
-  .focus-stage{
-    min-height:510px;
-  }
-
-  .vision{
-    margin-top:12px;
-    padding:13px;
-  }
-
-  .vision-icon{
-    width:37px;
-    height:37px;
-    flex-basis:37px;
-  }
-
-  .vision p{
-    font-size:9.5px;
-  }
-}
-
-@media(max-width:380px){
-
-  .children-grid{
-    grid-template-columns:1fr;
-  }
-
-  .child-card{
-    min-height:95px;
-  }
-
-}
-</style>
-</head>
-
-<body>
-
-<div class="page">
-
-<header>
-  <div class="brand">
-
-    <div class="logo">
-      <img src="logo.png.png" alt="شعار ثانوية الجنان">
-    </div>
-
-    <div>
-      <p class="brand-sub">
-        ثانوية الجنان - الإدارة العامة
-      </p>
-
-      <h1 class="brand-title">
-        الهيكلية الإدارية الرقمية
-      </h1>
-    </div>
-
-  </div>
-</header>
-
-<section class="hero">
-
-  <div class="hero-content">
-
-    <span class="year">
-      العام الدراسي 2026 - 2027
-    </span>
-
-    <h1>
-      الهيكلية الإدارية
-    </h1>
-
-    <p>
-      الهيكلية الإدارية المعتمدة في ثانوية الجنان
-      للعام الدراسي 2026 - 2027
-    </p>
-
-  </div>
-
-  <div class="hero-decoration"></div>
-
-</section>
-
-<section class="toolbar">
-
-  <div class="search-box">
-
-    <span class="search-icon">
-      ⌕
-    </span>
-
-    <input
-      id="searchInput"
-      type="search"
-      placeholder="ابحث بالاسم أو المسمى الوظيفي..."
-    >
-
-    <button
-      id="clearSearch"
-      class="clear-btn"
-      type="button"
-    >
-      ×
-    </button>
-
-  </div>
-
-</section>
-
-<section
-  id="searchResults"
-  class="results"
-  hidden
-></section>
-
-<section class="desktop-chart">
-
-  <div class="section-head">
-
-    <div>
-      <div class="section-eyebrow">
-        ORGANIZATIONAL CHART
-      </div>
-
-      <h2>
-        الهيكل الإداري الكامل
-      </h2>
-    </div>
-
-    <div class="desktop-hint">
-      اضغط على أي منصب لعرض التفاصيل
-    </div>
-
-  </div>
-
-  <div class="tree-wrap">
-    <div id="desktopTree"></div>
-  </div>
-
-</section>
-
-<section class="mobile-focus">
-
-  <div class="focus-shell">
-
-    <div class="focus-top">
-
-      <div class="focus-eyebrow">
-        INTERACTIVE ORGANIZATIONAL CHART
-      </div>
-
-      <h2 class="focus-title">
-        الهيكل الإداري
-      </h2>
-
-      <div class="mobile-guide">
-        اختر أحد الأقسام للانتقال إلى المستوى التالي
-      </div>
-
-    </div>
-
-    <div
-      id="breadcrumb"
-      class="breadcrumb"
-    ></div>
-
-    <div class="focus-stage">
-
-      <div id="currentCard"></div>
-
-      <div class="branch-line"></div>
-
-      <div
-        id="childrenGrid"
-        class="children-grid"
-      ></div>
-
-      <div class="focus-actions">
-
-        <button
-          id="backBtn"
-          class="focus-btn"
-          type="button"
-        >
-          ← المستوى السابق
-        </button>
-
-        <button
-          id="rootBtn"
-          class="focus-btn primary"
-          type="button"
-        >
-          المدير العام
-        </button>
-
-      </div>
-
-      <div class="minimap">
-
-        <div class="minimap-title">
-          موقعك ضمن الهيكلية
-        </div>
-
-        <div
-          id="minimapTrack"
-          class="minimap-track"
-        ></div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="vision">
-
-  <div class="vision-icon">
-    ✦
-  </div>
-
-  <p>
-    <strong>رؤيتنا:</strong>
-    إعداد جيل صالح متوازن، مزود بمهارات القرن الواحد والعشرين
-    الضرورية للنجاح في الحياة والعمل.
-  </p>
-
-</section>
-
-</div>
-
-<div id="sheet" class="sheet hidden">
-
-  <div id="sheetOverlay" class="sheet-overlay"></div>
-
-  <div class="sheet-card">
-
-    <div class="sheet-handle"></div>
-
-    <div id="sheetCategory" class="sheet-category"></div>
-
-    <h3 id="sheetRole"></h3>
-
-    <p id="sheetName" class="sheet-name"></p>
-
-    <div class="sheet-buttons">
-
-      <button
-        id="sheetClose"
-        class="sheet-btn"
-        type="button"
-      >
-        إغلاق
-      </button>
-
-      <button
-        id="sheetOpenChildren"
-        class="sheet-btn primary"
-        type="button"
-      >
-        عرض التابعين
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-<script>
-
 const orgData = {
 
   id:"manager",
@@ -1164,157 +8,77 @@ const orgData = {
 
   children:[
 
+    /* 1 */
     {
       id:"deputy",
       role:"نائب المدير",
       name:"د. يكانة يكن",
       category:"الإدارة العليا",
+      tone:"green"
+    },
+
+    /* 2 */
+    {
+      id:"admin-quality",
+      role:"الإشراف الإداري والجودة",
+      name:"أ. سامي حلاق",
+      category:"الإدارة والجودة",
       tone:"green",
 
       children:[
-
         {
-          id:"admin-quality",
-          role:"الإشراف الإداري والجودة",
+          id:"maintenance",
+          role:"مسؤول الصيانة",
+          name:"محمد لاغا",
+          category:"الخدمات والتشغيل",
+          tone:"gray"
+        },
+        {
+          id:"guard",
+          role:"حارس",
+          name:"",
+          category:"الخدمات والتشغيل",
+          tone:"gray"
+        },
+        {
+          id:"driver",
+          role:"سائق",
+          name:"",
+          category:"الخدمات والتشغيل",
+          tone:"gray"
+        },
+        {
+          id:"cleaner",
+          role:"عامل نظافة",
+          name:"",
+          category:"الخدمات والتشغيل",
+          tone:"gray"
+        },
+        {
+          id:"health",
+          role:"مسؤول الصحة العامة",
+          name:"أ. سوزان عبيد",
+          category:"الصحة العامة",
+          tone:"green"
+        },
+        {
+          id:"purchasing",
+          role:"مسؤول مشتريات",
           name:"أ. سامي حلاق",
-          category:"الإدارة والجودة",
-          tone:"green",
-
-          children:[
-
-            {
-              id:"maintenance",
-              role:"مسؤول الصيانة",
-              name:"محمد لاغا",
-              category:"الخدمات والتشغيل",
-              tone:"gray"
-            },
-
-            {
-              id:"guard",
-              role:"حارس",
-              name:"",
-              category:"الخدمات والتشغيل",
-              tone:"gray"
-            },
-
-            {
-              id:"driver",
-              role:"سائق",
-              name:"",
-              category:"الخدمات والتشغيل",
-              tone:"gray"
-            },
-
-            {
-              id:"cleaner",
-              role:"عامل نظافة",
-              name:"",
-              category:"الخدمات والتشغيل",
-              tone:"gray"
-            },
-
-            {
-              id:"health",
-              role:"مسؤول الصحة العامة",
-              name:"أ. سوزان عبيد",
-              category:"الصحة العامة",
-              tone:"green"
-            },
-
-            {
-              id:"purchasing",
-              role:"مسؤول مشتريات",
-              name:"أ. سامي حلاق",
-              category:"المشتريات",
-              tone:"outline"
-            },
-
-            {
-              id:"stock",
-              role:"مسؤول مخزون",
-              name:"أ. نهى الزهر",
-              category:"المخزون",
-              tone:"outline"
-            }
-
-          ]
-
-        }
-
-      ]
-
-    },
-
-    {
-      id:"secretary",
-      role:"أمين السر",
-      name:"أ. منى ضناوي",
-      category:"الإدارة",
-      tone:"green"
-    },
-
-    {
-      id:"hr",
-      role:"الموارد البشرية",
-      name:"أ. صبا الخضر",
-      category:"الموارد البشرية",
-      tone:"green"
-    },
-
-    {
-      id:"students",
-      role:"شؤون الطلاب",
-      name:"أ. مصطفى كمون",
-      category:"شؤون الطلاب",
-      tone:"green"
-    },
-
-    {
-      id:"finance",
-      role:"المالية",
-      name:"",
-      category:"الإدارة المالية",
-      tone:"mustard",
-
-      children:[
-
-        {
-          id:"audit",
-          role:"مدقق مالي",
-          name:"أ. عبدالله زيادة",
-          category:"المالية",
-          tone:"mustard"
+          category:"المشتريات",
+          tone:"outline"
         },
-
         {
-          id:"accountant",
-          role:"محاسب",
-          name:"أ. فاطمة أبو زيد",
-          category:"المالية",
-          tone:"mustard"
-        },
-
-        {
-          id:"cashier",
-          role:"أمين صندوق",
-          name:"أ. هنادي لاذقاني",
-          category:"المالية",
-          tone:"mustard"
+          id:"stock",
+          role:"مسؤول مخزون",
+          name:"أ. نهى الزهر",
+          category:"المخزون",
+          tone:"outline"
         }
-
       ]
-
     },
 
-    {
-      id:"marketing",
-      role:"قسم الإعلام والتسويق",
-      name:"أ. سامي حلاق",
-      category:"الإعلام والتسويق",
-      tone:"mustard"
-    },
-
+    /* 3 */
     {
       id:"education",
       role:"الإشراف التربوي",
@@ -1332,7 +96,6 @@ const orgData = {
           tone:"green",
 
           children:[
-
             {
               id:"kg-coordinator",
               role:"منسق",
@@ -1340,7 +103,6 @@ const orgData = {
               category:"مرحلة الروضات",
               tone:"outline"
             },
-
             {
               id:"kg-teacher",
               role:"معلم",
@@ -1348,9 +110,7 @@ const orgData = {
               category:"مرحلة الروضات",
               tone:"outline"
             }
-
           ]
-
         },
 
         {
@@ -1370,7 +130,6 @@ const orgData = {
               tone:"green",
 
               children:[
-
                 {
                   id:"primary-english-coordinator",
                   role:"منسق",
@@ -1378,7 +137,6 @@ const orgData = {
                   category:"القسم الإنكليزي",
                   tone:"outline"
                 },
-
                 {
                   id:"primary-english-teacher",
                   role:"معلم",
@@ -1386,9 +144,7 @@ const orgData = {
                   category:"القسم الإنكليزي",
                   tone:"outline"
                 }
-
               ]
-
             },
 
             {
@@ -1399,7 +155,6 @@ const orgData = {
               tone:"green",
 
               children:[
-
                 {
                   id:"primary-french-coordinator",
                   role:"منسق",
@@ -1407,7 +162,6 @@ const orgData = {
                   category:"القسم الفرنسي",
                   tone:"outline"
                 },
-
                 {
                   id:"primary-french-teacher",
                   role:"معلم",
@@ -1415,13 +169,10 @@ const orgData = {
                   category:"القسم الفرنسي",
                   tone:"outline"
                 }
-
               ]
-
             }
 
           ]
-
         },
 
         {
@@ -1432,7 +183,6 @@ const orgData = {
           tone:"green",
 
           children:[
-
             {
               id:"middle-coordinator",
               role:"منسق",
@@ -1440,7 +190,6 @@ const orgData = {
               category:"المرحلة المتوسطة",
               tone:"outline"
             },
-
             {
               id:"middle-teacher",
               role:"معلم",
@@ -1448,9 +197,7 @@ const orgData = {
               category:"المرحلة المتوسطة",
               tone:"outline"
             }
-
           ]
-
         },
 
         {
@@ -1461,7 +208,6 @@ const orgData = {
           tone:"green",
 
           children:[
-
             {
               id:"secondary-coordinator",
               role:"منسق",
@@ -1469,7 +215,6 @@ const orgData = {
               category:"المرحلة الثانوية",
               tone:"outline"
             },
-
             {
               id:"secondary-teacher",
               role:"معلم",
@@ -1477,9 +222,7 @@ const orgData = {
               category:"المرحلة الثانوية",
               tone:"outline"
             }
-
           ]
-
         },
 
         {
@@ -1490,7 +233,6 @@ const orgData = {
           tone:"green",
 
           children:[
-
             {
               id:"support-teacher",
               role:"معلم مساند",
@@ -1498,7 +240,6 @@ const orgData = {
               category:"الدعم التربوي",
               tone:"outline"
             },
-
             {
               id:"shadow-teacher",
               role:"معلم ظل",
@@ -1506,9 +247,7 @@ const orgData = {
               category:"الدعم التربوي",
               tone:"outline"
             }
-
           ]
-
         },
 
         {
@@ -1544,624 +283,67 @@ const orgData = {
         }
 
       ]
+    },
 
+    /* 4 */
+    {
+      id:"hr",
+      role:"الموارد البشرية",
+      name:"أ. صبا الخضر",
+      category:"الموارد البشرية",
+      tone:"green"
+    },
+
+    /* 5 */
+    {
+      id:"students",
+      role:"شؤون الطلاب",
+      name:"أ. مصطفى كمون",
+      category:"شؤون الطلاب",
+      tone:"green"
+    },
+
+    /* 6 */
+    {
+      id:"secretary",
+      role:"أمين السر",
+      name:"أ. منى ضناوي",
+      category:"الإدارة",
+      tone:"green"
+    },
+
+    /* 7 */
+    {
+      id:"finance",
+      role:"المالية",
+      name:"",
+      category:"الإدارة المالية",
+      tone:"mustard",
+
+      children:[
+        {
+          id:"audit",
+          role:"مدقق مالي",
+          name:"أ. عبدالله زيادة",
+          category:"المالية",
+          tone:"mustard"
+        },
+        {
+          id:"accountant",
+          role:"محاسب",
+          name:"أ. فاطمة أبو زيد",
+          category:"المالية",
+          tone:"mustard"
+        },
+        {
+          id:"cashier",
+          role:"أمين صندوق",
+          name:"أ. هنادي لاذقاني",
+          category:"المالية",
+          tone:"mustard"
+        }
+      ]
     }
 
   ]
-
 };
-
-const allNodes=[];
-const nodeMap=new Map();
-const parentMap=new Map();
-
-function indexNodes(node,parent=null){
-
-  allNodes.push(node);
-  nodeMap.set(node.id,node);
-
-  if(parent){
-    parentMap.set(node.id,parent);
-  }
-
-  (node.children || []).forEach(child=>{
-    indexNodes(child,node);
-  });
-
-}
-
-indexNodes(orgData);
-
-function toneClass(tone){
-
-  if(tone==="mustard"){
-    return "mustard";
-  }
-
-  if(tone==="gray"){
-    return "gray";
-  }
-
-  if(tone==="outline"){
-    return "outline";
-  }
-
-  return "green";
-
-}
-
-/* DESKTOP */
-
-function buildDesktopNode(node){
-
-  const li=document.createElement("li");
-
-  const button=document.createElement("button");
-
-  button.type="button";
-
-  button.className=`node-card ${toneClass(node.tone)}`;
-
-  button.innerHTML=`
-    <span class="node-role">${node.role}</span>
-    ${
-      node.name
-      ?
-      `<span class="node-name">${node.name}</span>`
-      :
-      ""
-    }
-  `;
-
-  button.onclick=()=>{
-    openSheet(node);
-  };
-
-  li.appendChild(button);
-
-  if(node.children && node.children.length){
-
-    const ul=document.createElement("ul");
-
-    node.children.forEach(child=>{
-      ul.appendChild(buildDesktopNode(child));
-    });
-
-    li.appendChild(ul);
-
-  }
-
-  return li;
-
-}
-
-function renderDesktop(){
-
-  const root=document.createElement("ul");
-
-  root.className="tree";
-
-  root.appendChild(
-    buildDesktopNode(orgData)
-  );
-
-  const holder=document.getElementById("desktopTree");
-
-  holder.innerHTML="";
-
-  holder.appendChild(root);
-
-}
-
-renderDesktop();
-
-/* MOBILE */
-
-let currentNode=orgData;
-let currentPath=[orgData];
-
-function getPathToNode(nodeId){
-
-  const path=[];
-
-  let node=nodeMap.get(nodeId);
-
-  if(!node){
-    return [orgData];
-  }
-
-  while(node){
-
-    path.unshift(node);
-
-    node=parentMap.get(node.id);
-
-  }
-
-  return path;
-
-}
-
-function getCurrentClass(node){
-
-  if(node.tone==="mustard"){
-    return "mustard-current";
-  }
-
-  if(node.tone==="gray"){
-    return "gray-current";
-  }
-
-  return "";
-
-}
-
-function renderFocus(){
-
-  const currentCard=document.getElementById("currentCard");
-  const childrenGrid=document.getElementById("childrenGrid");
-  const breadcrumb=document.getElementById("breadcrumb");
-  const minimapTrack=document.getElementById("minimapTrack");
-
-  currentCard.innerHTML=`
-    <button
-      id="currentNodeButton"
-      class="current-card ${getCurrentClass(currentNode)}"
-      type="button"
-    >
-
-      <div class="role">
-        ${currentNode.role}
-      </div>
-
-      ${
-        currentNode.name
-        ?
-        `<div class="name">${currentNode.name}</div>`
-        :
-        ""
-      }
-
-      <div class="current-category">
-        ${currentNode.category || ""}
-      </div>
-
-    </button>
-  `;
-
-  document.getElementById("currentNodeButton").onclick=()=>{
-    openSheet(currentNode);
-  };
-
-  childrenGrid.innerHTML="";
-
-  if(currentNode.children && currentNode.children.length){
-
-    currentNode.children.forEach(child=>{
-
-      const button=document.createElement("button");
-
-      button.type="button";
-
-      let extraClass="";
-
-      if(child.children && child.children.length){
-        extraClass+=" has-children";
-      }
-
-      if(child.tone==="mustard"){
-        extraClass+=" finance-child";
-      }
-
-      button.className="child-card"+extraClass;
-
-      button.innerHTML=`
-
-        <div class="child-role">
-          ${child.role}
-        </div>
-
-        <div class="child-name">
-          ${child.name || child.category || ""}
-        </div>
-
-        <div class="child-arrow">
-          ${
-            child.children && child.children.length
-            ?
-            "←"
-            :
-            "i"
-          }
-        </div>
-
-      `;
-
-      button.onclick=()=>{
-
-        if(child.children && child.children.length){
-
-          goToNode(child);
-
-        }else{
-
-          openSheet(child);
-
-        }
-
-      };
-
-      childrenGrid.appendChild(button);
-
-    });
-
-  }else{
-
-    childrenGrid.innerHTML=`
-      <div class="no-children">
-
-        لا توجد أقسام أو وظائف تابعة مباشرة لهذا المستوى.
-
-        <br>
-
-        اضغط على البطاقة أعلاه لعرض التفاصيل.
-
-      </div>
-    `;
-
-  }
-
-  breadcrumb.innerHTML="";
-
-  currentPath.forEach((node,index)=>{
-
-    const button=document.createElement("button");
-
-    button.type="button";
-
-    button.className=
-      "crumb"
-      +
-      (
-        index===currentPath.length-1
-        ?
-        " active"
-        :
-        ""
-      );
-
-    button.textContent=node.role;
-
-    button.onclick=()=>{
-
-      currentNode=node;
-
-      currentPath=currentPath.slice(0,index+1);
-
-      animateFocus();
-
-    };
-
-    breadcrumb.appendChild(button);
-
-  });
-
-  minimapTrack.innerHTML="";
-
-  currentPath.forEach((node,index)=>{
-
-    if(index>0){
-
-      const line=document.createElement("div");
-
-      line.className="map-line";
-
-      minimapTrack.appendChild(line);
-
-    }
-
-    const dot=document.createElement("div");
-
-    dot.className=
-      "map-dot"
-      +
-      (
-        index===currentPath.length-1
-        ?
-        " active"
-        :
-        ""
-      );
-
-    minimapTrack.appendChild(dot);
-
-  });
-
-  document.getElementById("backBtn").disabled=
-    currentPath.length===1;
-
-}
-
-function animateFocus(){
-
-  const stage=document.querySelector(".focus-stage");
-
-  stage.animate(
-    [
-      {
-        opacity:.35,
-        transform:"translateX(-14px)"
-      },
-      {
-        opacity:1,
-        transform:"translateX(0)"
-      }
-    ],
-    {
-      duration:220,
-      easing:"ease-out"
-    }
-  );
-
-  renderFocus();
-
-}
-
-function goToNode(node){
-
-  currentNode=node;
-
-  currentPath=getPathToNode(node.id);
-
-  animateFocus();
-
-}
-
-document.getElementById("backBtn").onclick=()=>{
-
-  if(currentPath.length<=1){
-    return;
-  }
-
-  currentPath.pop();
-
-  currentNode=
-    currentPath[currentPath.length-1];
-
-  animateFocus();
-
-};
-
-document.getElementById("rootBtn").onclick=()=>{
-
-  currentNode=orgData;
-
-  currentPath=[orgData];
-
-  animateFocus();
-
-};
-
-renderFocus();
-
-/* SHEET */
-
-const sheet=document.getElementById("sheet");
-
-let sheetNode=null;
-
-function openSheet(node){
-
-  sheetNode=node;
-
-  document.getElementById("sheetCategory").textContent=
-    node.category || "";
-
-  document.getElementById("sheetRole").textContent=
-    node.role;
-
-  document.getElementById("sheetName").textContent=
-    node.name || "لا يوجد اسم محدد";
-
-  const openButton=
-    document.getElementById("sheetOpenChildren");
-
-  if(node.children && node.children.length){
-
-    openButton.style.display="block";
-
-    openButton.textContent="عرض التابعين";
-
-  }else{
-
-    openButton.style.display="none";
-
-  }
-
-  sheet.classList.remove("hidden");
-
-}
-
-function closeSheet(){
-
-  sheet.classList.add("hidden");
-
-}
-
-document.getElementById("sheetClose").onclick=
-  closeSheet;
-
-document.getElementById("sheetOverlay").onclick=
-  closeSheet;
-
-document.getElementById("sheetOpenChildren").onclick=()=>{
-
-  if(
-    sheetNode &&
-    sheetNode.children &&
-    sheetNode.children.length
-  ){
-
-    closeSheet();
-
-    goToNode(sheetNode);
-
-  }
-
-};
-
-/* SEARCH */
-
-function normalizeArabic(text){
-
-  return String(text)
-    .toLowerCase()
-    .replace(/[إأآ]/g,"ا")
-    .replace(/ى/g,"ي")
-    .replace(/ة/g,"ه")
-    .replace(/ؤ/g,"و")
-    .replace(/ئ/g,"ي")
-    .replace(/ـ/g,"")
-    .replace(/\s+/g," ")
-    .trim();
-
-}
-
-const searchInput=
-  document.getElementById("searchInput");
-
-const searchResults=
-  document.getElementById("searchResults");
-
-searchInput.addEventListener("input",()=>{
-
-  const query=
-    normalizeArabic(searchInput.value);
-
-  if(!query){
-
-    searchResults.hidden=true;
-
-    return;
-
-  }
-
-  const matches=
-    allNodes.filter(node=>{
-
-      const searchable=
-        normalizeArabic(
-          `${node.role} ${node.name || ""} ${node.category || ""}`
-        );
-
-      return searchable.includes(query);
-
-    });
-
-  searchResults.hidden=false;
-
-  const grid=
-    document.createElement("div");
-
-  grid.className=
-    "results-grid";
-
-  if(matches.length===0){
-
-    grid.innerHTML=`
-      <div class="result-item">
-
-        <strong>
-          لا توجد نتيجة
-        </strong>
-
-        <span>
-          جرّب كتابة جزء من الاسم أو المسمى الوظيفي
-        </span>
-
-      </div>
-    `;
-
-  }
-
-  matches.forEach(node=>{
-
-    const button=
-      document.createElement("button");
-
-    button.type="button";
-
-    button.className=
-      "result-item";
-
-    button.innerHTML=`
-
-      <strong>
-        ${node.role}
-      </strong>
-
-      <span>
-        ${node.name || node.category}
-      </span>
-
-    `;
-
-    button.onclick=()=>{
-
-      searchResults.hidden=true;
-
-      if(window.innerWidth<=700){
-
-        goToNode(node);
-
-        setTimeout(()=>{
-
-          document
-            .querySelector(".mobile-focus")
-            .scrollIntoView({
-              behavior:"smooth",
-              block:"start"
-            });
-
-        },60);
-
-      }else{
-
-        openSheet(node);
-
-      }
-
-    };
-
-    grid.appendChild(button);
-
-  });
-
-  searchResults.innerHTML="";
-
-  searchResults.appendChild(grid);
-
-});
-
-document.getElementById("clearSearch").onclick=()=>{
-
-  searchInput.value="";
-
-  searchResults.hidden=true;
-
-  searchInput.focus();
-
-};
-
-document.addEventListener("keydown",event=>{
-
-  if(event.key==="Escape"){
-    closeSheet();
-  }
-
-});
-
-</script>
-
-</body>
-</html>
